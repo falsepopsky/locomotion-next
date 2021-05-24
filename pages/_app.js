@@ -1,7 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-
   *, ::after, ::before {
   box-sizing: border-box;
   }
@@ -12,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Roboto';
   }
 `;
 
