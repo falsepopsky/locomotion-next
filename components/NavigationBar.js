@@ -1,23 +1,58 @@
 import styled from 'styled-components';
-import Image from 'next/image';
+import Link from 'next/link';
+import { LocomotionSVG } from './svgs/Svgs';
 
 const NavigationBar = styled.nav`
   width: 100%;
-  height: 64px;
+  height: 54px;
   display: flex;
   flex-flow: row nowrap;
-  background: #000000;
+  align-items: center;
+  padding: 0 2vw;
+`;
+
+const LogoContainer = styled.div`
+  width: auto;
+  height: 54px;
+`;
+
+const RoutesContainer = styled.div`
+  margin-left: auto;
+`;
+
+const StyledLink = styled.a`
+  color: inherit;
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  text-decoration: none;
+  border-radius: 16px;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.5;
+    border-radius: 16px;
+    box-shadow: inset 0px 0px 0px 1px hsl(0, 0%, 20%);
+  }
 `;
 
 const Navigation = () => {
   return (
     <NavigationBar>
-      <Image
-        alt="Locomotion Logo"
-        src="/logo_white.png"
-        width={272}
-        height={64}
-      />
+      <LogoContainer>
+        <Link href="/" passHref>
+          <a>
+            <LocomotionSVG />
+          </a>
+        </Link>
+      </LogoContainer>
+      <RoutesContainer>
+        <Link href="/horarios" passHref>
+          <StyledLink>Horarios</StyledLink>
+        </Link>
+        <Link href="/about" passHref>
+          <StyledLink>About</StyledLink>
+        </Link>
+      </RoutesContainer>
     </NavigationBar>
   );
 };
