@@ -1,5 +1,5 @@
 {
-  "name": "with-styled-components",
+  "name": "locomotion-next",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -7,11 +7,15 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
+    "luxon": "^1.27.0",
+    "next": "^10.2.3",
+    "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
-    "styled-components": "^5.2.3"
+    "react-player": "^2.9.0",
+    "styled-components": "^5.2.3",
+    "swr": "^0.5.6"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0"

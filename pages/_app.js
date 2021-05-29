@@ -1,7 +1,16 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import Router from 'next/router';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+
+Router.events.on('routeChangeStart', () => {
+  NProgress.start();
+  NProgress.configure({ showSpinner: false });
+});
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 const GlobalStyle = createGlobalStyle`
-
   *, ::after, ::before {
   box-sizing: border-box;
   }
@@ -10,14 +19,24 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     min-height: 100vh;
+    background: #1e2023;
+    color: #fafafa;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
   }
 `;
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: '#fafafa',
+  },
+  font: {
+    family: {
+      primary: 'Poppins',
+      secondary: 'Segoe UI',
+    },
   },
 };
 

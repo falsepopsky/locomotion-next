@@ -1,17 +1,19 @@
 import Meta from '../components/meta/Meta';
-import Player from '../components/Player';
 import Navigation from '../components/NavigationBar';
-import ContainerGuide from '../components/ContainerGuide';
 import { Main } from '../components/Styles';
 
-export default function Home() {
+const AboutSEO = {
+  title: 'About',
+  description: 'About Locomotion TV Sample',
+};
+
+export default function About() {
   return (
     <>
-      <Meta />
+      <Meta title={AboutSEO.title} description={AboutSEO.description} />
       <Navigation />
       <Main>
-        <Player />
-        <ContainerGuide />
+        <p>pagina de about</p>
       </Main>
     </>
   );
