@@ -106,7 +106,7 @@ const TimerContainer = styled.div`
   }
 `;
 
-const GuideCard = ({ name, image, sinopsis }) => {
+const GuideCard = ({ name, image, sinopsis, start, ending }) => {
   return (
     <ContainerCard>
       <CardImage>
@@ -125,7 +125,9 @@ const GuideCard = ({ name, image, sinopsis }) => {
         </SinopsisContainer>
         <TimerContainer>
           <Timer />
-          <Text>19:00 - 19:30</Text>
+          <Text>
+            {start} - {ending}
+          </Text>
         </TimerContainer>
       </CardInfo>
     </ContainerCard>

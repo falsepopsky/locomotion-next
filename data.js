@@ -6,6 +6,8 @@ export const horarios = [
       {
         id: '1',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '00:00:00-03:00',
         ending: '00:30:00-03:00',
       },
@@ -18,6 +20,8 @@ export const horarios = [
       {
         id: '3',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '01:00:00-03:00',
         ending: '01:30:00-03:00',
       },
@@ -32,6 +36,8 @@ export const horarios = [
       {
         id: '5',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '02:00:00-03:00',
         ending: '02:30:00-03:00',
       },
@@ -68,6 +74,8 @@ export const horarios = [
       {
         id: '11',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '05:00:00-03:00',
         ending: '05:30:00-03:00',
       },
@@ -106,6 +114,8 @@ export const horarios = [
       {
         id: '17',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '08:00:00-03:00',
         ending: '08:30:00-03:00',
       },
@@ -208,6 +218,8 @@ export const horarios = [
       {
         id: '34',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '18:00:00-03:00',
         ending: '18:30:00-03:00',
       },
@@ -244,6 +256,8 @@ export const horarios = [
       {
         id: '40',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '21:00:00-03:00',
         ending: '21:30:00-03:00',
       },
@@ -288,6 +302,8 @@ export const horarios = [
       {
         id: '1',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '00:00:00-03:00',
         ending: '00:30:00-03:00',
       },
@@ -300,6 +316,8 @@ export const horarios = [
       {
         id: '3',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '01:00:00-03:00',
         ending: '01:30:00-03:00',
       },
@@ -314,6 +332,8 @@ export const horarios = [
       {
         id: '5',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '02:00:00-03:00',
         ending: '02:30:00-03:00',
       },
@@ -350,6 +370,8 @@ export const horarios = [
       {
         id: '11',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '05:00:00-03:00',
         ending: '05:30:00-03:00',
       },
@@ -388,6 +410,8 @@ export const horarios = [
       {
         id: '17',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '08:00:00-03:00',
         ending: '08:30:00-03:00',
       },
@@ -412,6 +436,8 @@ export const horarios = [
       {
         id: '21',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '10:00:00-03:00',
         ending: '10:30:00-03:00',
       },
@@ -448,6 +474,8 @@ export const horarios = [
       {
         id: '27',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '13:00:00-03:00',
         ending: '13:30:00-03:00',
       },
@@ -486,6 +514,8 @@ export const horarios = [
       {
         id: '33',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '16:00:00-03:00',
         ending: '16:30:00-03:00',
       },
@@ -510,6 +540,8 @@ export const horarios = [
       {
         id: '37',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '18:00:00-03:00',
         ending: '18:30:00-03:00',
       },
@@ -546,6 +578,8 @@ export const horarios = [
       {
         id: '43',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '21:00:00-03:00',
         ending: '21:30:00-03:00',
       },
@@ -590,6 +624,8 @@ export const horarios = [
       {
         id: '1',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '00:00:00-03:00',
         ending: '00:30:00-03:00',
       },
@@ -602,6 +638,8 @@ export const horarios = [
       {
         id: '3',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '01:00:00-03:00',
         ending: '01:30:00-03:00',
       },
@@ -616,6 +654,8 @@ export const horarios = [
       {
         id: '5',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '02:00:00-03:00',
         ending: '02:30:00-03:00',
       },
@@ -652,6 +692,8 @@ export const horarios = [
       {
         id: '11',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '05:00:00-03:00',
         ending: '05:30:00-03:00',
       },
@@ -690,6 +732,8 @@ export const horarios = [
       {
         id: '17',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '08:00:00-03:00',
         ending: '08:30:00-03:00',
       },
@@ -714,6 +758,8 @@ export const horarios = [
       {
         id: '21',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '10:00:00-03:00',
         ending: '10:30:00-03:00',
       },
@@ -750,6 +796,8 @@ export const horarios = [
       {
         id: '27',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '13:00:00-03:00',
         ending: '13:30:00-03:00',
       },
@@ -788,6 +836,8 @@ export const horarios = [
       {
         id: '33',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '16:00:00-03:00',
         ending: '16:30:00-03:00',
       },
@@ -812,6 +862,8 @@ export const horarios = [
       {
         id: '37',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '18:00:00-03:00',
         ending: '18:30:00-03:00',
       },
@@ -848,6 +900,8 @@ export const horarios = [
       {
         id: '43',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '21:00:00-03:00',
         ending: '21:30:00-03:00',
       },
@@ -892,6 +946,8 @@ export const horarios = [
       {
         id: '1',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '00:00:00-03:00',
         ending: '00:30:00-03:00',
       },
@@ -904,6 +960,8 @@ export const horarios = [
       {
         id: '3',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '01:00:00-03:00',
         ending: '01:30:00-03:00',
       },
@@ -918,6 +976,8 @@ export const horarios = [
       {
         id: '5',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '02:00:00-03:00',
         ending: '02:30:00-03:00',
       },
@@ -954,6 +1014,8 @@ export const horarios = [
       {
         id: '11',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '05:00:00-03:00',
         ending: '05:30:00-03:00',
       },
@@ -992,6 +1054,8 @@ export const horarios = [
       {
         id: '17',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '08:00:00-03:00',
         ending: '08:30:00-03:00',
       },
@@ -1016,6 +1080,8 @@ export const horarios = [
       {
         id: '21',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '10:00:00-03:00',
         ending: '10:30:00-03:00',
       },
@@ -1052,6 +1118,8 @@ export const horarios = [
       {
         id: '27',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '13:00:00-03:00',
         ending: '13:30:00-03:00',
       },
@@ -1090,6 +1158,8 @@ export const horarios = [
       {
         id: '33',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '16:00:00-03:00',
         ending: '16:30:00-03:00',
       },
@@ -1114,6 +1184,8 @@ export const horarios = [
       {
         id: '37',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '18:00:00-03:00',
         ending: '18:30:00-03:00',
       },
@@ -1150,6 +1222,8 @@ export const horarios = [
       {
         id: '43',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '21:00:00-03:00',
         ending: '21:30:00-03:00',
       },
@@ -1194,6 +1268,8 @@ export const horarios = [
       {
         id: '1',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '00:00:00-03:00',
         ending: '00:30:00-03:00',
       },
@@ -1206,6 +1282,8 @@ export const horarios = [
       {
         id: '3',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '01:00:00-03:00',
         ending: '01:30:00-03:00',
       },
@@ -1220,6 +1298,8 @@ export const horarios = [
       {
         id: '5',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '02:00:00-03:00',
         ending: '02:30:00-03:00',
       },
@@ -1256,6 +1336,8 @@ export const horarios = [
       {
         id: '11',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '05:00:00-03:00',
         ending: '05:30:00-03:00',
       },
@@ -1294,6 +1376,8 @@ export const horarios = [
       {
         id: '17',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '08:00:00-03:00',
         ending: '08:30:00-03:00',
       },
@@ -1318,6 +1402,8 @@ export const horarios = [
       {
         id: '21',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '10:00:00-03:00',
         ending: '10:30:00-03:00',
       },
@@ -1354,6 +1440,8 @@ export const horarios = [
       {
         id: '27',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '13:00:00-03:00',
         ending: '13:30:00-03:00',
       },
@@ -1392,6 +1480,8 @@ export const horarios = [
       {
         id: '33',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '16:00:00-03:00',
         ending: '16:30:00-03:00',
       },
@@ -1416,6 +1506,8 @@ export const horarios = [
       {
         id: '37',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '18:00:00-03:00',
         ending: '18:30:00-03:00',
       },
@@ -1452,6 +1544,8 @@ export const horarios = [
       {
         id: '43',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '21:00:00-03:00',
         ending: '21:30:00-03:00',
       },
@@ -1495,39 +1589,47 @@ export const horarios = [
     data: [
       {
         id: '1',
-        name: 'Japanimotion',
+        name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '00:00:00-03:00',
-        ending: '01:00:00-03:00',
+        ending: '00:30:00-03:00',
       },
       {
         id: '2',
-        name: 'Especial de Locomotion',
-        start: '01:00:00-03:00',
-        ending: '04:00:00-03:00',
+        name: "B't X",
+        start: '00:30:00-03:00',
+        ending: '01:00:00-03:00',
       },
       {
         id: '3',
-        name: "Cat's Eye",
-        start: '04:00:00-03:00',
-        ending: '04:30:00-03:00',
+        name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
+        start: '01:00:00-03:00',
+        ending: '01:30:00-03:00',
       },
       {
         id: '4',
-        name: 'Robotech',
-        start: '04:30:00-03:00',
-        ending: '05:00:00-03:00',
+        name: 'Cowboy Bebop',
+        sinopsis:
+          'El esbelto y despreocupado Spike Spiegel se equilibra con su bullicioso y pragmático compañero Jet Black mientras la pareja se gana la vida persiguiendo y recogiendo recompensas.',
+        start: '01:30:00-03:00',
+        ending: '02:00:00-03:00',
       },
       {
         id: '5',
-        name: 'Cybuster',
-        start: '05:00:00-03:00',
-        ending: '05:30:00-03:00',
+        name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
+        start: '02:00:00-03:00',
+        ending: '02:30:00-03:00',
       },
       {
         id: '6',
-        name: 'Cyber Team in Akihabara',
-        start: '05:30:00-03:00',
-        ending: '06:00:00-03:00',
+        name: 'Nadesico',
+        start: '02:30:00-03:00',
+        ending: '03:00:00-03:00',
       },
       {
         id: '7',
@@ -1562,6 +1664,8 @@ export const horarios = [
       {
         id: '12',
         name: "Wolf's Rain",
+        sinopsis:
+          "En un futuro postapocalíptico donde la raza humana vive en ciudades cubiertas y rodeadas de tierra estéril, se cree que los lobos llevan doscientos años extintos. Pero no es así, sino que viven entre los humanos, con la 'apariencia' de éstos.",
         start: '10:00:00-03:00',
         ending: '10:30:00-03:00',
       },
@@ -1598,6 +1702,8 @@ export const horarios = [
       {
         id: '18',
         name: 'Evangelion',
+        sinopsis:
+          'Quince años después del Segundo Impacto, Shinji Ikari se une a NERV, el grupo de jóvenes pilotos formado por su padre para combatir a los monstruosos Ángeles.',
         start: '13:00:00-03:00',
         ending: '13:30:00-03:00',
       },
@@ -1636,6 +1742,8 @@ export const horarios = [
       {
         id: '24',
         name: 'Virtua Fighter',
+        sinopsis:
+          'Alex es un Virtua Fighter y maestro del Hakkyoku Ken. Allí conoce a Erica, la hija del líder de Koenkan, quien no quiere tener nada que ver. Juntos forman equipo para luchar y conocer otros luchadores.',
         start: '16:00:00-03:00',
         ending: '16:30:00-03:00',
       },
