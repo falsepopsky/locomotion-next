@@ -21,17 +21,17 @@ const RoutesContainer = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: inherit;
+  color: #1e2023;
   padding: 0.5em 1em;
   margin: 0 0.5em;
   text-decoration: none;
-  border-radius: 16px;
+  border-radius: 10px;
   opacity: 1;
+  background: rgb(129, 230, 217);
 
   &:hover {
-    opacity: 0.5;
-    border-radius: 16px;
-    box-shadow: inset 0px 0px 0px 1px hsl(0, 0%, 20%);
+    opacity: 0.7;
+    border-radius: 10px;
   }
 `;
 

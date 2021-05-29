@@ -37,6 +37,8 @@ const CardInfo = styled.div`
   border-radius: 12px;
   overflow: hidden;
   overflow-wrap: break-word;
+  transition-duration: 0.5s;
+  transition-property: box-shadow;
 
   &:hover {
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.7);
@@ -67,9 +69,10 @@ const SinopsisContainer = styled.div`
 
 const Text = styled.p`
   margin: ${(props) => (props.sinopsis ? '0' : '0 0 0 1vw')};
-  color: ${(props) => (props.sinopsis ? '#bdbdbd' : '#9e9e9e')};
+  color: ${(props) => (props.sinopsis ? '#bdbdbd' : '#ecfafc')};
   font-weight: ${(props) => (props.sinopsis ? '300' : '400')};
   font-size: ${(props) => (props.sinopsis ? '16px' : '14px')};
+  user-select: ${(props) => (props.sinopsis ? 'auto' : 'none')};
 
   &::selection {
     text-shadow: none;

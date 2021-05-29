@@ -99,7 +99,7 @@ export const Timer = () => {
       viewBox="0 0 368 368"
       width={20}
       height={20}
-      fill="#9e9e9e"
+      fill="#ecfafc"
       className="timer-svg">
       <g>
         <path d="M184,60c4.4,0,8-3.6,8-8v-4c0-4.4-3.6-8-8-8c-4.4,0-8,3.6-8,8v4C176,56.4,179.6,60,184,60z" />

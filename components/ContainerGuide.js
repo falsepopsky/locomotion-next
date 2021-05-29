@@ -13,6 +13,7 @@ const CardTable = styled.div`
   scrollbar-color: #73ffca #dd0d0d00;
   scrollbar-width: thin;
   background: #1e2023;
+  padding: 2vh 0;
 `;
 
 const ContainerGuide = () => {
