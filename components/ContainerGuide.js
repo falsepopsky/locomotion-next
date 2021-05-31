@@ -22,7 +22,7 @@ const CardTable = styled.div`
   flex-flow: column nowrap;
   height: 100%;
   overflow: hidden auto;
-  scrollbar-color: #73ffca #dd0d0d00;
+  scrollbar-color: #73ffca #255348;
   scrollbar-width: thin;
   background: #1e2023;
   padding: 2vh 0;
@@ -47,7 +47,7 @@ const ContainerGuide = () => {
           return (
             <GuideCard
               key={dat.id}
-              image={'cowboy_bebop.jpg'}
+              image={dat.cover}
               name={dat.name}
               sinopsis={dat.sinopsis}
               start={DateTime.fromISO(dat.start).toFormat('T')}
