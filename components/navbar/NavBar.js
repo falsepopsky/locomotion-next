@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { LocomotionSVG } from './svgs/Svgs';
+import { LocomotionSVG } from '../svgs/Svgs';
 
 const NavigationBar = styled.nav`
   width: 100%;

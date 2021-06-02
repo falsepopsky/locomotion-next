@@ -1,4 +1,4 @@
-import { horarios } from '../../../data';
+import { horarios } from '../../../data/horarios';
 
 export default function dayHandler({ query: { day } }, res) {
   const filtered = horarios.filter((p) => p.day === day);
