@@ -53,7 +53,8 @@ const Title = styled.p`
 
   &::selection {
     text-shadow: none;
-    background: rgba(37, 100, 255, 0.15);
+    background: #aaffec;
+    color: black;
   }
 
   @media (min-width: 576px) {
@@ -68,15 +69,17 @@ const SinopsisContainer = styled.div`
 `;
 
 const Text = styled.p`
-  margin: ${(props) => (props.sinopsis ? '0' : '0 0 0 1vw')};
+  margin: ${(props) => (props.sinopsis ? '0 1px 0 0' : '0 0 0 1vw')};
   color: ${(props) => (props.sinopsis ? '#bdbdbd' : '#ecfafc')};
   font-weight: ${(props) => (props.sinopsis ? '300' : '400')};
   font-size: ${(props) => (props.sinopsis ? '16px' : '14px')};
   user-select: ${(props) => (props.sinopsis ? 'auto' : 'none')};
+  letter-spacing: ${(props) => (props.sinopsis ? '-1px;' : 'normal')};
 
   &::selection {
     text-shadow: none;
-    background: rgba(37, 100, 255, 0.15);
+    background: #aaffec;
+    color: black;
   }
 
   @media (min-width: 576px) {

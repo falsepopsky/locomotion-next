@@ -1,5 +1,5 @@
 import Meta from '../components/meta/Meta';
-import Navigation from '../components/NavigationBar';
+import Navigation from '../components/navbar/NavBar';
 import { Main } from '../components/Styles';
 
 const AboutSEO = {

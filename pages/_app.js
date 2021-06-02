@@ -15,6 +15,23 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   }
 
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #255348;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #73ffca;
+    border-radius: 0;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #73ffca;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -25,6 +42,7 @@ const GlobalStyle = createGlobalStyle`
     color: #fafafa;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
+    scrollbar-color: #73ffca #255348;
   }
 `;
 
