@@ -1,5 +1,5 @@
 import Meta from '../components/meta/Meta';
-import Player from '../components/Player';
+import Player from '../components/player/Player';
 import Navigation from '../components/navbar/NavBar';
 import ContainerGuide from '../components/ContainerGuide';
 import { Main } from '../components/Styles';

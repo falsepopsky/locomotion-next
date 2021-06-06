@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import GuideCard from './GuideCard';
 import useSWR from 'swr';
 import { getTodayName, formatTime } from './../utils/luxonModule';
+import { Spinner } from './loader/LoaderStyles';
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -15,6 +16,9 @@ const fetcher = async (url) => {
 
 const GuideTV = styled.section`
   height: 35vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 `;
 
 const CardTable = styled.div`
@@ -40,8 +44,13 @@ const ContainerGuide = () => {
 
   const { data, error } = useDay();
 
-  if (error) return <div>{error.message}</div>;
-  if (!data) return <div>Loading...</div>;
+  if (error) return <GuideTV>{error.message}</GuideTV>;
+  if (!data)
+    return (
+      <GuideTV>
+        <Spinner />
+      </GuideTV>
+    );
 
   return (
     <GuideTV>
