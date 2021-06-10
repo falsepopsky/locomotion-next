@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import { Timer } from './svgs/Svgs';
-import PropTypes from 'prop-types';
+import { Timer } from '../svgs/Svgs';
 
 const ContainerCard = styled.div`
   display: flex;
@@ -33,7 +32,7 @@ const CardInfo = styled.div`
   max-height: 156px;
   margin-left: 1vw;
   padding-left: 2vw;
-  background: #18191c;
+  background: rgb(30, 32, 35);
   border-radius: 12px;
   overflow: hidden;
   overflow-wrap: break-word;
@@ -109,7 +108,7 @@ const TimerContainer = styled.div`
   }
 `;
 
-const GuideCard = ({ name, image, sinopsis, start, ending }) => {
+const ShowCard = ({ name, image, sinopsis, start, ending }) => {
   return (
     <ContainerCard>
       <CardImage>
@@ -137,10 +136,4 @@ const GuideCard = ({ name, image, sinopsis, start, ending }) => {
   );
 };
 
-GuideCard.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string,
-  sinopsis: PropTypes.string,
-};
-
-export default GuideCard;
+export default ShowCard;
