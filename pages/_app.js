@@ -34,7 +34,6 @@ const GlobalStyle = createGlobalStyle`
     background: #73ffca;
   }
 
-
   .page-transition-enter {
     opacity: 0;
     transform: translate3d(0, 20px, 0);
@@ -67,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    background: #1e2023;
+    background: rgb(24, 25, 28);
     color: #fafafa;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;

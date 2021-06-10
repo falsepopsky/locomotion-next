@@ -10,12 +10,14 @@ const animationSpinner = css`
 
 export const Spinner = styled.div`
   content: '';
-  width: 60px;
-  height: 60px;
-  margin: 0px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
   border-radius: 50%;
   border: 2px solid transparent;
   border-top-color: #01f1e3;
+  border-left-color: #01f1e34d;
+  border-right-color: #01f1e34d;
   border-bottom-color: #01f1e3;
   animation: ${animationSpinner};
 `;

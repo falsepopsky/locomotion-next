@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { LocomotionSVG } from '../svgs/Svgs';
 
 const NavigationBar = styled.nav`
+  padding: 0 2vw;
   width: 100%;
   height: 54px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 0 2vw;
+  background: rgb(30, 32, 35);
 `;
 
 const LogoContainer = styled.div`
@@ -21,17 +22,14 @@ const RoutesContainer = styled.div`
 `;
 
 const StyledLink = styled.a`
-  color: #1e2023;
-  padding: 0.5em 1em;
+  padding: 0;
   margin: 0 0.5em;
   text-decoration: none;
-  border-radius: 10px;
   opacity: 1;
-  background: rgb(129, 230, 217);
+  color: rgb(129, 230, 217);
 
   &:hover {
     opacity: 0.7;
-    border-radius: 10px;
   }
 `;
 
