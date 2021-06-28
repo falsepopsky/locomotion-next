@@ -1,7 +1,10 @@
 import { useRef, useState } from 'react';
+import { findDOMNode } from 'react-dom';
 import ReactPlayer from 'react-player/lazy';
 import { Spinner } from './../loader/LoaderStyles';
+import Controls from './../controls/Controls';
 import { PlayButton } from './../svgs/Svgs';
+import screenfull from 'screenfull';
 
 const mediaStreamUrl = 'http://51.222.85.85:81/hls/loco/index.m3u8';
 const PHcookie = 'PHPSESSID=loh6rdeltt2klck5u35lpss9g7';
@@ -20,11 +23,35 @@ const configPlayer = {
 
 const Player = () => {
   const reactPlayer = useRef();
-  const [playing, SetPlaying] = useState(false);
-  const [volume, SetVolume] = useState(0.7);
 
-  const handlePlayPause = () => {
-    SetPlaying(!playing);
+  const [playerProps, SetPlayerProps] = useState({
+    volume: 0.7,
+    playing: false,
+    muted: false,
+  });
+
+  const handleClickFullscreen = () => {
+    screenfull.request(findDOMNode(reactPlayer.current));
+  };
+
+  const handleClickPlayPause = () => {
+    if (!playerProps.playing) {
+      SetPlayerProps({ ...playerProps, playing: true });
+    } else {
+      SetPlayerProps({ ...playerProps, playing: false });
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    SetPlayerProps({ ...playerProps, volume: parseFloat(e.target.value) });
+  };
+
+  const handleClickToggleMuted = () => {
+    if (!playerProps.muted) {
+      SetPlayerProps({ ...playerProps, muted: true });
+    } else {
+      SetPlayerProps({ ...playerProps, muted: false });
+    }
   };
 
   return (
@@ -37,15 +64,20 @@ const Player = () => {
         light={true}
         width="100%"
         height="100%"
-        playing={playing}
+        muted={playerProps.muted}
+        playing={playerProps.playing}
         playIcon={<PlayButton />}
         config={configPlayer}
+        volume={playerProps.volume}
       />
-      <div style={{ position: 'absolute', bottom: 0, width: '100%' }}>
-        <button onClick={() => handlePlayPause()}>
-          {playing ? 'Pause' : 'Play'}
-        </button>
-      </div>
+      <Controls
+        handleFullscreen={handleClickFullscreen}
+        handlePlay={handleClickPlayPause}
+        handleMuted={handleClickToggleMuted}
+        volumeControl={playerProps.volume}
+        handleVolume={handleVolumeChange}
+        player={playerProps.playing}
+      />
     </>
   );
 };

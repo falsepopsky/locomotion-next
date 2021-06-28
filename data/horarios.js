@@ -2,7 +2,7 @@ export const horarios = [
   {
     id: '1',
     day: 'monday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Animafilms',
@@ -341,7 +341,7 @@ export const horarios = [
   {
     id: '2',
     day: 'tuesday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Virtua Fighter',
@@ -779,7 +779,7 @@ export const horarios = [
   {
     id: '3',
     day: 'wednesday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Virtua Fighter',
@@ -1217,7 +1217,7 @@ export const horarios = [
   {
     id: '4',
     day: 'thursday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Virtua Fighter',
@@ -1655,7 +1655,7 @@ export const horarios = [
   {
     id: '5',
     day: 'friday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Virtua Fighter',
@@ -2093,7 +2093,7 @@ export const horarios = [
   {
     id: '6',
     day: 'saturday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Virtua Fighter',
@@ -2466,7 +2466,7 @@ export const horarios = [
   {
     id: '7',
     day: 'sunday',
-    data: [
+    shows: [
       {
         id: '1',
         name: 'Japanimotion',
