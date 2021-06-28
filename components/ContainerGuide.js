@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ShowCard from './tv-card/ShowCard';
+import ShowCard from './show-card/ShowCard';
 import useSWR from 'swr';
 import { getTodayName, formatTime } from './../utils/luxonModule';
 import { Spinner } from './loader/LoaderStyles';
@@ -14,7 +14,7 @@ const fetcher = async (url) => {
   return data;
 };
 
-const CardTable = styled.div`
+const ShowsWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
@@ -40,22 +40,22 @@ const ContainerGuide = () => {
   if (!data) return <Spinner />;
 
   return (
-    <CardTable>
-      {data.data.map((dat) => {
-        const formatedStart = formatTime(dat.start);
-        const formatedEnding = formatTime(dat.ending);
+    <ShowsWrapper>
+      {data.shows.map((show) => {
+        const formatedStart = formatTime(show.start);
+        const formatedEnding = formatTime(show.ending);
         return (
           <ShowCard
-            key={dat.id}
-            image={dat.cover}
-            name={dat.name}
-            sinopsis={dat.sinopsis}
+            key={show.id}
+            image={show.cover}
+            name={show.name}
+            sinopsis={show.sinopsis}
             start={formatedStart}
             ending={formatedEnding}
           />
         );
       })}
-    </CardTable>
+    </ShowsWrapper>
   );
 };
 

@@ -48,7 +48,7 @@ const Navigation = () => {
           <StyledLink>Horarios</StyledLink>
         </Link>
         <Link href="/about" passHref>
-          <StyledLink>About</StyledLink>
+          <StyledLink>Acerca de</StyledLink>
         </Link>
       </RoutesContainer>
     </NavigationBar>
