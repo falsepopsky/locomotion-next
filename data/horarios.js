@@ -207,7 +207,7 @@ export const horarios = [
         cover: 'animafilms.webp',
         sinopsis:
           'Espacio dedicado a las mejores películas animadas de todo el mundo.',
-        start: '15:30:00-03:00',
+        start: '15:00:00-03:00',
         ending: '17:00:00-03:00',
       },
       {

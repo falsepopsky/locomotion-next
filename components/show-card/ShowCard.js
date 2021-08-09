@@ -62,9 +62,13 @@ const Title = styled.p`
 `;
 
 const SinopsisContainer = styled.div`
-  overflow: hidden auto;
+  overflow: hidden;
   height: 50px;
   scrollbar-width: thin;
+
+  &:hover {
+    overflow: hidden auto;
+  }
 `;
 
 const Text = styled.p`

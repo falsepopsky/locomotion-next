@@ -42,8 +42,8 @@ const Player = () => {
     }
   };
 
-  const handleVolumeChange = (e) => {
-    SetPlayerProps({ ...playerProps, volume: parseFloat(e.target.value) });
+  const handleVolumeChange = (vol) => {
+    SetPlayerProps({ ...playerProps, volume: parseFloat(vol / 100) });
   };
 
   const handleClickToggleMuted = () => {

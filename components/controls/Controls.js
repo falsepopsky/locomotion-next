@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Pause, Play, VolumeSound, Fullscreen } from './../svgs/Svgs';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 const ControlsContainer = styled.div`
   position: absolute;
@@ -35,98 +37,8 @@ const BtnControl = styled.button`
   background: transparent;
   border-radius: 0.4rem;
 
-  :hover {
+  &:hover {
     background: hsla(0, 0%, 100%, 0.2);
-  }
-`;
-
-const InputVolume = styled.input`
-  background: transparent;
-  height: 25px;
-  -webkit-appearance: none;
-  margin: 0 10px;
-  width: 100px;
-
-  :focus {
-    outline: none;
-  }
-  ::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-    animation: 0.2s;
-    box-shadow: none;
-    background: #24e3a4;
-    border-radius: 2px;
-    border: none;
-  }
-  ::-webkit-slider-thumb {
-    box-shadow: none;
-    border: none;
-    height: 14px;
-    width: 14px;
-    border-radius: 25px;
-    background: #f2f2f2;
-    cursor: pointer;
-  }
-  :focus::-webkit-slider-runnable-track {
-    background: #2497e3;
-  }
-  ::-moz-range-track {
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-    animation: 0.2s;
-    box-shadow: none;
-    background: #24e3a4;
-    border-radius: 2px;
-    border: none;
-  }
-  ::-moz-range-thumb {
-    box-shadow: none;
-    border: none;
-    height: 14px;
-    width: 14px;
-    border-radius: 25px;
-    background: #f2f2f2;
-    cursor: pointer;
-  }
-  ::-ms-track {
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-    animate: 0.2s;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-  }
-  ::-ms-fill-lower {
-    background: #2497e3;
-    border: 0px solid #000000;
-    border-radius: 2px;
-    box-shadow: 0px 0px 0px #000000;
-  }
-  ::-ms-fill-upper {
-    background: #2497e3;
-    border: 0px solid #000000;
-    border-radius: 2px;
-    box-shadow: 0px 0px 0px #000000;
-  }
-  ::-ms-thumb {
-    margin-top: 1px;
-    box-shadow: 0px 0px 0px #000000;
-    border: 1px solid #2497e3;
-    height: 18px;
-    width: 18px;
-    border-radius: 25px;
-    background: #a1d0ff;
-    cursor: pointer;
-  }
-  :focus::-ms-fill-lower {
-    background: #2497e3;
-  }
-  ::focus::-ms-fill-upper {
-    background: #2497e3;
   }
 `;
 
@@ -148,14 +60,14 @@ const Controls = ({
         <BtnControl onClick={handleMuted}>
           <VolumeSound />
         </BtnControl>
-        <InputVolume
-          type="range"
-          min={0}
-          max={1}
-          step="any"
-          value={volumeControl}
-          onChange={handleVolume}
-        />
+        <div style={{ width: '100px', margin: '0 10px' }}>
+          <Slider
+            min={0}
+            max={100}
+            value={volumeControl * 100}
+            onChange={handleVolume}
+          />
+        </div>
         <BtnControl onClick={handleFullscreen}>
           <Fullscreen />
         </BtnControl>
