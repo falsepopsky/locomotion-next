@@ -1,60 +1,26 @@
-import styled from 'styled-components';
-import { Pause, Play, VolumeSound, Fullscreen } from './../svgs/Svgs';
+import {
+  ControlsContainer,
+  ControlsWrapper,
+  BtnControl,
+} from './controls-styles';
+import { Pause, Play, VolumeSound, Fullscreen, ExitFS } from './../svgs/Svgs';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-const ControlsContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 54px;
-`;
-
-const ControlsWrapper = styled.div`
-  height: 100%;
-  margin: 0;
-  padding: 0 2vw;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  opacity: 0;
-
-  :hover {
-    opacity: 1;
-  }
-`;
-
-const BtnControl = styled.button`
-  margin: 0;
-  padding: 4px;
-  width: auto;
-  min-width: 28px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background: transparent;
-  border-radius: 0.4rem;
-
-  &:hover {
-    background: hsla(0, 0%, 100%, 0.2);
-  }
-`;
-
 const Controls = ({
-  handleFullscreen,
+  handleScreen,
   handlePlay,
   volumeControl,
   handleVolume,
   handleMuted,
-  player,
+  isPlaying,
+  handleFS,
 }) => {
   return (
     <ControlsContainer>
       <ControlsWrapper>
         <BtnControl onClick={handlePlay}>
-          {player ? <Pause /> : <Play />}
+          {isPlaying ? <Pause /> : <Play />}
         </BtnControl>
 
         <BtnControl onClick={handleMuted}>
@@ -68,8 +34,8 @@ const Controls = ({
             onChange={handleVolume}
           />
         </div>
-        <BtnControl onClick={handleFullscreen}>
-          <Fullscreen />
+        <BtnControl onClick={handleScreen}>
+          {handleFS ? <ExitFS /> : <Fullscreen />}
         </BtnControl>
       </ControlsWrapper>
     </ControlsContainer>

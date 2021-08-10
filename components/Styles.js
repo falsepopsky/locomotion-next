@@ -11,6 +11,7 @@ export const PlayerContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  background: #0d0d0d;
 `;
 
 export const GuideContainer = styled.section`
