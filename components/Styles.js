@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  height: calc(100vh - 54px);
+  height: ${({ page }) => (page ? page : 'calc(100vh - 54px)')};
 `;
 
 export const PlayerContainer = styled.section`
@@ -11,6 +11,7 @@ export const PlayerContainer = styled.section`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  background: #0d0d0d;
 `;
 
 export const GuideContainer = styled.section`
@@ -19,4 +20,9 @@ export const GuideContainer = styled.section`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+`;
+
+export const RegularSection = styled.section`
+  display: flex;
+  flex-flow: column nowrap;
 `;

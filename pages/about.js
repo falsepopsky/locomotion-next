@@ -28,7 +28,7 @@ export default function About(props) {
     <>
       <Meta title={AboutSEO.title} description={AboutSEO.description} />
       <Navigation />
-      <Main>
+      <Main page={'auto'}>
         <p>pagina de about</p>
       </Main>
     </>

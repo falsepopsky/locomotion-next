@@ -9,7 +9,6 @@ const NavigationBar = styled.nav`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  background: rgb(30, 32, 35);
 `;
 
 const LogoContainer = styled.div`

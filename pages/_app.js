@@ -66,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    background: rgb(24, 25, 28);
+    background: black;
     color: #fafafa;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
@@ -96,7 +96,8 @@ export default function App({ Component, pageProps, router }) {
           classNames="page-transition"
           loadingComponent={<Loader />}
           loadingDelay={500}
-          loadingTimeout={0}>
+          loadingTimeout={0}
+        >
           <Component {...pageProps} key={router.route} />
         </PageTransition>
       </ThemeProvider>
