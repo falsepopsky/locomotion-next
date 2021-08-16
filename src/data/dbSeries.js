@@ -1,4 +1,4 @@
-export const dbSeries = [
+export const Series = [
   [
     'Animafilms',
     'animafilms.webp',

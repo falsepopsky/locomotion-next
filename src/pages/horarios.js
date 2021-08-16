@@ -1,8 +1,8 @@
-import Meta from '../components/meta/Meta';
-import Navigation from '../components/navbar/NavBar';
-import { Main } from '../components/Styles';
 import { useState } from 'react';
 import styled from 'styled-components';
+import Meta from '../components/meta/Meta';
+import Navigation from '../components/navbar/NavBar';
+import { Main } from '../components/ui/Styles';
 
 const Heading = styled.h2`
   border: 1px solid #ddd;

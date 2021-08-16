@@ -1,7 +1,10 @@
+import { useState, useEffect } from 'react';
+
+// Components
 import Meta from '../components/meta/Meta';
 import Navigation from '../components/navbar/NavBar';
-import { Main } from '../components/Styles';
-import { useState, useEffect } from 'react';
+import { Main } from '../components/ui/Styles';
+import Footer from '../components/footer/Footer';
 
 const AboutSEO = {
   title: 'About',
@@ -31,6 +34,7 @@ export default function About(props) {
       <Main page={'auto'}>
         <p>pagina de about</p>
       </Main>
+      <Footer />
     </>
   );
 }

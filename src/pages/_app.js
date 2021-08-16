@@ -66,23 +66,24 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    background: black;
+    background: #0b0b0b;
     color: #fafafa;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    scrollbar-color: #73ffca #255348;
+    scrollbar-color: #fff #0b0b0b;
   }
 `;
 
 const theme = {
-  colors: {
-    primary: '#fafafa',
+  dark: {
+    'back-100': '#0b0b0b',
+    'back-200': '#0d0d0d',
+    'back-300': '#181818',
   },
-  font: {
-    family: {
-      primary: 'Poppins',
-      secondary: 'Segoe UI',
-    },
+  white: {
+    'whi-100': '#f5f5f5',
+    'whi-200': '#d9d9d9',
+    'whi-300': '#ecfafc',
   },
 };
 

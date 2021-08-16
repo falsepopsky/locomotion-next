@@ -1,15 +1,13 @@
 import styled from 'styled-components';
-import Image from 'next/image';
-import { Timer } from '../svgs/Svgs';
 
-const ContainerCard = styled.div`
+export const ContainerCard = styled.div`
   display: flex;
   flex-flow: row nowrap;
   padding: 0.5vh 2vw;
   margin-bottom: 6px;
 `;
 
-const CardImage = styled.div`
+export const CardImage = styled.div`
   min-width: 102px;
   max-width: 102px;
   min-height: 156px;
@@ -23,7 +21,7 @@ const CardImage = styled.div`
   }
 `;
 
-const CardInfo = styled.div`
+export const CardInfo = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -36,9 +34,14 @@ const CardInfo = styled.div`
   border-radius: 12px;
   overflow: hidden;
   overflow-wrap: break-word;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 15px;
+  }
 `;
 
-const Title = styled.p`
+export const Title = styled.p`
   margin: 0;
   font-size: 22px;
   font-weight: 600;
@@ -55,7 +58,7 @@ const Title = styled.p`
   }
 `;
 
-const SinopsisContainer = styled.div`
+export const SinopsisContainer = styled.div`
   overflow: hidden;
   height: 50px;
   scrollbar-width: thin;
@@ -65,7 +68,7 @@ const SinopsisContainer = styled.div`
   }
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
   padding-right: ${({ sinopsis }) => (sinopsis ? '2vw' : null)};
   margin: ${({ sinopsis }) => (sinopsis ? '0 1px 0 0' : '0 0 0 1vw')};
   color: ${({ sinopsis }) => (sinopsis ? '#bdbdbd' : '#ecfafc')};
@@ -85,12 +88,12 @@ const Text = styled.p`
   }
 `;
 
-const TimerContainer = styled.div`
+export const TimerContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   width: max-content;
-  background: #323234;
+  background: #181818;
   border-radius: 6px;
   padding: 2px 10px;
 
@@ -106,33 +109,3 @@ const TimerContainer = styled.div`
     }
   }
 `;
-
-const ShowCard = ({ name, image, sinopsis, start, ending }) => {
-  return (
-    <ContainerCard>
-      <CardImage>
-        <Image
-          className="img-banner"
-          alt={name}
-          src={'/banners/' + image}
-          layout="fill"
-          objectFit="fill"
-        />
-      </CardImage>
-      <CardInfo>
-        <Title>{name}</Title>
-        <SinopsisContainer>
-          <Text sinopsis>{sinopsis}</Text>
-        </SinopsisContainer>
-        <TimerContainer>
-          <Timer />
-          <Text>
-            {start} - {ending}
-          </Text>
-        </TimerContainer>
-      </CardInfo>
-    </ContainerCard>
-  );
-};
-
-export default ShowCard;
