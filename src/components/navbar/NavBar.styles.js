@@ -21,6 +21,7 @@ export const RoutesContainer = styled.div`
 export const StyledLink = styled.a`
   padding: 0;
   margin: 0 0.5em;
+  font-size: 14px;
   text-decoration: none;
   opacity: 1;
   color: #d9d9d9;

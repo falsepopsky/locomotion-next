@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
     flex-flow: column nowrap;
     min-height: 100vh;
     background: #0b0b0b;
-    color: #fafafa;
+    color: ${({ theme }) => theme.white.secondary};
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     scrollbar-color: #fff #0b0b0b;
@@ -81,8 +81,8 @@ const theme = {
     'back-300': '#181818',
   },
   white: {
-    'whi-100': '#f5f5f5',
-    'whi-200': '#d9d9d9',
+    primary: '#f5f5f5',
+    secondary: '#d9d9d9',
     'whi-300': '#ecfafc',
   },
 };
@@ -90,8 +90,8 @@ const theme = {
 export default function App({ Component, pageProps, router }) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <PageTransition
           timeout={300}
           classNames="page-transition"

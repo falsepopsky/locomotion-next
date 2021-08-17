@@ -1,11 +1,7 @@
 import { Footer } from './Footer.styles';
 
 const Foot = () => {
-  return (
-    <Footer>
-      <p style={{ paddin: '0' }}>hello i'm down here</p>
-    </Footer>
-  );
+  return <Footer>hey</Footer>;
 };
 
 export default Foot;

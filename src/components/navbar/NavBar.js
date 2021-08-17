@@ -18,8 +18,8 @@ const Navigation = () => {
         </Link>
       </LogoContainer>
       <RoutesContainer>
-        <Link href="/horarios" passHref>
-          <StyledLink>Horarios</StyledLink>
+        <Link href="/programacion" passHref>
+          <StyledLink>Programación</StyledLink>
         </Link>
         <Link href="/about" passHref>
           <StyledLink>Acerca de</StyledLink>

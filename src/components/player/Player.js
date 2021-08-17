@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import { findDOMNode } from 'react-dom';
 import ReactPlayer from 'react-player/lazy';
 import screenfull from 'screenfull';
 
@@ -38,10 +37,10 @@ const Player = () => {
   const handleClickFullscreen = () => {
     if (isFullScreen) {
       SetIsFullScreen(false);
-      screenfull.exit(findDOMNode(containerPlayer.current));
+      screenfull.exit(containerPlayer.current);
     } else {
       SetIsFullScreen(true);
-      screenfull.request(findDOMNode(containerPlayer.current));
+      screenfull.request(containerPlayer.current);
     }
   };
 
