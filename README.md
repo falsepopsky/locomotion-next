@@ -4,7 +4,7 @@
 
 ## :information_source: About
 
-...
+> ...
 
 ### :rocket: Check the site
 

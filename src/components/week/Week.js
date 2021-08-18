@@ -1,19 +1,61 @@
-import { SmallCard, TextCard } from './Week.style';
+// Libs
+import useSWR from 'swr';
+import { formatTime } from '../../utils/luxonModule';
+import { fetcher } from '../../utils/fetcher';
+
+// Component
+import {
+  WrapperSlider,
+  ContainerDay,
+  DayName,
+  SmallCard,
+  TextCard,
+} from './Week.style';
+import Slider from '../carrousel/Carrousel';
+import { Spinner } from '../loader/LoaderStyles';
 
 const Week = () => {
+  function GetHorarios() {
+    const URL_GUIDE = '/api/guide/';
+    return useSWR(URL_GUIDE, fetcher, {
+      revalidateOnMount: true,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+    });
+  }
+
+  const { data, error } = GetHorarios();
+
+  if (error) return <div>{error.message}</div>;
+  if (!data) return <Spinner />;
+
   return (
-    <>
-      <SmallCard>
-        <TextCard time>14:00 - 15:00</TextCard>
+    <WrapperSlider>
+      <Slider>
+        {data.map((dat) => {
+          return (
+            <ContainerDay key={dat.id}>
+              <DayName>{dat.day}</DayName>
 
-        <TextCard>Evangelion</TextCard>
-      </SmallCard>
-      <SmallCard>
-        <TextCard time>15:00 - 15:30</TextCard>
+              {dat.shows.map((show) => {
+                const start = formatTime(show.start);
+                const end = formatTime(show.ending);
 
-        <TextCard>Especial de Locomotion</TextCard>
-      </SmallCard>
-    </>
+                return (
+                  <SmallCard key={show.id}>
+                    <TextCard time>
+                      {start} - {end}
+                    </TextCard>
+
+                    <TextCard>{show.name}</TextCard>
+                  </SmallCard>
+                );
+              })}
+            </ContainerDay>
+          );
+        })}
+      </Slider>
+    </WrapperSlider>
   );
 };
 

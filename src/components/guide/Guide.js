@@ -1,21 +1,12 @@
 // Libs
 import useSWR from 'swr';
 import { getTodayName, formatTime } from '../../utils/luxonModule';
+import { fetcher } from '../../utils/fetcher';
 
 // Components
 import { ShowsWrapper } from './Guide.styles';
 import ShowCard from '../show-card/ShowCard';
 import { Spinner } from '../loader/LoaderStyles';
-
-const fetcher = async (url) => {
-  const res = await fetch(url);
-  const data = await res.json();
-  console.log('se esta pidiendo los datos otra vez');
-  if (res.status !== 200) {
-    throw new Error(data.message);
-  }
-  return data;
-};
 
 const ContainerGuide = () => {
   function useDay() {

@@ -7,13 +7,15 @@ export default function Horarios() {
   return (
     <>
       <Meta
-        title={'Horarios'}
-        keywords={'Horarios, Locomotion, Anime, TV, TV Online, Gratis, 90s'}
+        title={'Programacion semanal'}
+        keywords={
+          'Horarios, Programacion, Locomotion, Anime, TV, TV Online, Gratis, 90s'
+        }
         description={'Programación semanal de Locomotion TV'}
       />
       <Navigation />
-      <Main>
-        <Wrapper page>
+      <Main page>
+        <Wrapper>
           <StyledH2>Programación semanal</StyledH2>
 
           <Week />

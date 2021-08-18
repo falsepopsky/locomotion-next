@@ -13,25 +13,30 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    scrollbar-color: #fff #0b0b0b;
+    scrollbar-width: thin;
+  }
+
   *, ::after, ::before {
   box-sizing: border-box;
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
   
   ::-webkit-scrollbar-track {
-    background: #255348;
+    background: #0b0b0b;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #73ffca;
+    background: #fff;
     border-radius: 0;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #73ffca;
+    background: #ffffffc7;
   }
 
   .page-transition-enter {
@@ -69,8 +74,8 @@ const GlobalStyle = createGlobalStyle`
     background: #0b0b0b;
     color: ${({ theme }) => theme.white.secondary};
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
-    scrollbar-color: #fff #0b0b0b;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 `;
 

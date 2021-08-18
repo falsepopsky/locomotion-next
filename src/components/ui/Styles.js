@@ -25,7 +25,7 @@ export const GuideContainer = styled.section`
 export const Wrapper = styled.section`
   display: flex;
   flex-flow: column nowrap;
-  padding: 0 5vw;
+  padding: 0 4vw;
 `;
 
 export const StyledH2 = styled.h2`
