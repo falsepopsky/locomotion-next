@@ -13,25 +13,30 @@ Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    scrollbar-color: #fff #0b0b0b;
+    scrollbar-width: thin;
+  }
+
   *, ::after, ::before {
   box-sizing: border-box;
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
   
   ::-webkit-scrollbar-track {
-    background: #255348;
+    background: #0b0b0b;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #73ffca;
+    background: #fff;
     border-radius: 0;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #73ffca;
+    background: #ffffffc7;
   }
 
   .page-transition-enter {
@@ -66,31 +71,32 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    background: black;
-    color: #fafafa;
+    background: #0b0b0b;
+    color: ${({ theme }) => theme.white.secondary};
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
-    scrollbar-color: #73ffca #255348;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 `;
 
 const theme = {
-  colors: {
-    primary: '#fafafa',
+  dark: {
+    'back-100': '#0b0b0b',
+    'back-200': '#0d0d0d',
+    'back-300': '#181818',
   },
-  font: {
-    family: {
-      primary: 'Poppins',
-      secondary: 'Segoe UI',
-    },
+  white: {
+    primary: '#f5f5f5',
+    secondary: '#d9d9d9',
+    'whi-300': '#ecfafc',
   },
 };
 
 export default function App({ Component, pageProps, router }) {
   return (
     <>
-      <GlobalStyle />
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <PageTransition
           timeout={300}
           classNames="page-transition"

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  height: ${({ page }) => (page ? page : 'calc(100vh - 54px)')};
+  height: ${({ page }) => (page ? 'auto' : 'calc(100vh - 54px)')};
 `;
 
 export const PlayerContainer = styled.section`
@@ -22,7 +22,15 @@ export const GuideContainer = styled.section`
   justify-content: center;
 `;
 
-export const RegularSection = styled.section`
+export const Wrapper = styled.section`
   display: flex;
   flex-flow: column nowrap;
+  padding: 0 4vw;
+`;
+
+export const StyledH2 = styled.h2`
+  margin: 2.5em 0 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 400;
 `;

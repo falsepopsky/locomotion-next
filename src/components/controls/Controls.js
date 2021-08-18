@@ -1,11 +1,14 @@
+// Libraries
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
+
+// Components
 import {
   ControlsContainer,
   ControlsWrapper,
   BtnControl,
-} from './controls-styles';
+} from './Controls.styles';
 import { Pause, Play, VolumeSound, Fullscreen, ExitFS } from './../svgs/Svgs';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
 
 const Controls = ({
   handleScreen,

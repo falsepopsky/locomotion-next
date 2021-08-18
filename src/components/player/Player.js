@@ -1,11 +1,12 @@
 import { useState, useRef } from 'react';
-import { findDOMNode } from 'react-dom';
 import ReactPlayer from 'react-player/lazy';
+import screenfull from 'screenfull';
+
+// Components
 import { Spinner } from './../loader/LoaderStyles';
+import { PlayerContainer } from '../ui/Styles';
 import Controls from './../controls/Controls';
 import { PlayButton } from './../svgs/Svgs';
-import screenfull from 'screenfull';
-import { PlayerContainer } from '../Styles';
 
 const mediaStreamUrl = 'http://51.222.85.85:81/hls/loco/index.m3u8';
 const PHcookie = 'PHPSESSID=loh6rdeltt2klck5u35lpss9g7';
@@ -36,10 +37,10 @@ const Player = () => {
   const handleClickFullscreen = () => {
     if (isFullScreen) {
       SetIsFullScreen(false);
-      screenfull.exit(findDOMNode(containerPlayer.current));
+      screenfull.exit(containerPlayer.current);
     } else {
       SetIsFullScreen(true);
-      screenfull.request(findDOMNode(containerPlayer.current));
+      screenfull.request(containerPlayer.current);
     }
   };
 
