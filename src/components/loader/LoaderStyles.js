@@ -16,4 +16,5 @@ export const Spinner = styled.div`
   border-right-color: #01f1e34d;
   border-bottom-color: #01f1e3;
   animation: ${spinnerRotate} 0.7s ease infinite;
+  align-self: center;
 `;
