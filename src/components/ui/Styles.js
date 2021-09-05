@@ -33,4 +33,6 @@ export const StyledH2 = styled.h2`
   padding: 0;
   text-align: center;
   font-weight: 400;
+  max-width: max-content;
+  align-self: center;
 `;

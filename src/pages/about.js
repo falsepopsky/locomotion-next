@@ -1,12 +1,12 @@
 import Meta from '../components/meta/Meta';
 import Navigation from '../components/navbar/NavBar';
 import { Main, Wrapper } from '../components/ui/Styles';
+import Legacy from '../components/legacy/Legacy';
 import Footer from '../components/footer/Footer';
-import { Bar } from '../components/loader/Bar';
 
 const AboutSEO = {
-  title: 'About',
-  description: 'About Locomotion TV Sample',
+  title: 'Acerca de Locomotion TV',
+  description: 'Acerca de Locomotion TV',
 };
 
 export default function About() {
@@ -16,7 +16,7 @@ export default function About() {
       <Navigation />
       <Main page>
         <Wrapper>
-          <Bar />
+          <Legacy />
         </Wrapper>
       </Main>
       <Footer />

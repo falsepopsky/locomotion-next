@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const WrapperSlider = styled.div`
   width: 100%;
-  z-index: 100;
 
   .react-multi-carousel-track {
     will-change: auto;
@@ -59,6 +58,8 @@ export const DayName = styled.h3`
   padding: 0 0 16px;
   font-weight: 400;
   border-bottom: 1px solid #e0ffd4;
+  pointer-events: none;
+  user-select: none;
 `;
 
 export const SmallCard = styled.div`
@@ -67,6 +68,7 @@ export const SmallCard = styled.div`
   display: flex;
   flex-flow: column nowrap;
   border-left: 2px solid white;
+  user-select: none;
 
   &:hover {
     border-color: blue;

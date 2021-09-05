@@ -1,5 +1,5 @@
 // Libs
-import useSWR from 'swr';
+import useSWRImmutable from 'swr/immutable';
 import { formatTime } from '../../utils/luxonModule';
 import { fetcher } from '../../utils/fetcher';
 
@@ -15,16 +15,9 @@ import Slider from '../carrousel/Carrousel';
 import { Spinner } from '../loader/LoaderStyles';
 
 const Week = () => {
-  function GetHorarios() {
-    const URL_GUIDE = '/api/guide/';
-    return useSWR(URL_GUIDE, fetcher, {
-      revalidateOnMount: true,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    });
-  }
+  const URL_GUIDE = '/api/guide/';
 
-  const { data, error } = GetHorarios();
+  const { data, error } = useSWRImmutable(URL_GUIDE, fetcher);
 
   if (error) return <div>{error.message}</div>;
   if (!data) return <Spinner />;

@@ -6,3 +6,9 @@ export const fetcher = async (url) => {
   }
   return data;
 };
+
+export const optionsSWR = {
+  revalidateOnMount: true,
+  revalidateOnFocus: false,
+  revalidateOnReconnect: false,
+};
