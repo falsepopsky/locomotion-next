@@ -1,7 +1,7 @@
 // Libs
-import useSWR from 'swr';
+import useSWRImmutable from 'swr/immutable';
 import { formatTime } from '../../utils/luxonModule';
-import { fetcher, optionsSWR } from '../../utils/fetcher';
+import { fetcher } from '../../utils/fetcher';
 
 // Component
 import {
@@ -17,7 +17,7 @@ import { Spinner } from '../loader/LoaderStyles';
 const Week = () => {
   const URL_GUIDE = '/api/guide/';
 
-  const { data, error } = useSWR(URL_GUIDE, fetcher, optionsSWR);
+  const { data, error } = useSWRImmutable(URL_GUIDE, fetcher);
 
   if (error) return <div>{error.message}</div>;
   if (!data) return <Spinner />;

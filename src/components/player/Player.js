@@ -9,7 +9,7 @@ import Controls from './../controls/Controls';
 import { PlayButton } from './../svgs/Svgs';
 
 const mediaStreamUrl = 'http://51.222.85.85:81/hls/loco/index.m3u8';
-const PHcookie = 'PHPSESSID=loh6rdeltt2klck5u35lpss9g7';
+
 const configPlayer = {
   file: {
     forceHLS: true,
@@ -32,7 +32,7 @@ const Player = () => {
     muted: false,
   });
 
-  const containerPlayer = useRef();
+  const containerPlayer = useRef(null);
 
   const handleClickFullscreen = () => {
     if (isFullScreen) {
@@ -45,23 +45,21 @@ const Player = () => {
   };
 
   const handleClickPlayPause = () => {
-    if (!playerProps.playing) {
-      SetPlayerProps({ ...playerProps, playing: true });
-    } else {
-      SetPlayerProps({ ...playerProps, playing: false });
-    }
+    SetPlayerProps({
+      ...playerProps,
+      playing: !playerProps.playing ? true : false,
+    });
   };
 
   const handleVolumeChange = (vol) => {
     SetPlayerProps({ ...playerProps, volume: parseFloat(vol / 100) });
   };
 
-  const handleClickToggleMuted = () => {
-    if (!playerProps.muted) {
-      SetPlayerProps({ ...playerProps, muted: true });
-    } else {
-      SetPlayerProps({ ...playerProps, muted: false });
-    }
+  const handleToggleMuted = () => {
+    SetPlayerProps({
+      ...playerProps,
+      muted: !playerProps.muted ? true : false,
+    });
   };
 
   return (
@@ -83,7 +81,7 @@ const Player = () => {
         handleScreen={handleClickFullscreen}
         handleFS={isFullScreen}
         handlePlay={handleClickPlayPause}
-        handleMuted={handleClickToggleMuted}
+        handleMuted={handleToggleMuted}
         volumeControl={playerProps.volume}
         handleVolume={handleVolumeChange}
         isPlaying={playerProps.playing}

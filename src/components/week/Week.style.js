@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const WrapperSlider = styled.div`
   width: 100%;
-  z-index: 100;
 
   .react-multi-carousel-track {
     will-change: auto;

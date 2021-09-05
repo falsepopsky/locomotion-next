@@ -2,7 +2,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const Slider = ({ children }) => {
-  const responsive = {
+  const breakpoints = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 2000 },
       items: 5,
@@ -27,7 +27,7 @@ const Slider = ({ children }) => {
 
   return (
     <Carousel
-      responsive={responsive}
+      responsive={breakpoints}
       deviceType={'desktop'}
       ssr
       slidesToSlide={1}

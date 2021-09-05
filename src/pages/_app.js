@@ -3,12 +3,11 @@ import Router from 'next/router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import { PageTransition } from 'next-page-transitions';
-import Loader from '../components/loader/Loader';
+import { darkTheme } from '../theme/loco';
 
-Router.events.on('routeChangeStart', () => {
-  NProgress.start();
-  NProgress.configure({ showSpinner: false });
-});
+NProgress.configure({ showSpinner: false });
+
+Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
@@ -48,6 +47,11 @@ const GlobalStyle = createGlobalStyle`
     transform: translate3d(0, 0, 0);
     transition: opacity 300ms, transform 300ms;
   }
+  .page-transition-enter-done {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+  }
   .page-transition-exit {
     opacity: 1;
   }
@@ -72,38 +76,19 @@ const GlobalStyle = createGlobalStyle`
     flex-flow: column nowrap;
     min-height: 100vh;
     background: #0b0b0b;
-    color: ${({ theme }) => theme.white.secondary};
+    color: ${({ theme }) => theme.colors.links};
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
   }
 `;
 
-const theme = {
-  dark: {
-    'back-100': '#0b0b0b',
-    'back-200': '#0d0d0d',
-    'back-300': '#181818',
-  },
-  white: {
-    primary: '#f5f5f5',
-    secondary: '#d9d9d9',
-    'whi-300': '#ecfafc',
-  },
-};
-
 export default function App({ Component, pageProps, router }) {
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <PageTransition
-          timeout={300}
-          classNames="page-transition"
-          loadingComponent={<Loader />}
-          loadingDelay={500}
-          loadingTimeout={0}
-        >
+        <PageTransition timeout={300} classNames="page-transition">
           <Component {...pageProps} key={router.route} />
         </PageTransition>
       </ThemeProvider>
