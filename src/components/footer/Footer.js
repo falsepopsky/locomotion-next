@@ -7,11 +7,9 @@ const Foot = () => {
       <Hr />
       <Container>
         <Category>
-          <Information>
-            Produced and developed by Science Department
-          </Information>
+          <Information>Locomotion TV NEXT 2021-2022</Information>
         </Category>
-        <Category>
+        <Category science>
           <Science />
         </Category>
       </Container>

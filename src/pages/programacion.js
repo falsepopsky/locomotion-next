@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Meta from '../components/meta/Meta';
 import Navigation from '../components/navbar/NavBar';
 import { Main, Wrapper, StyledH2 } from '../components/ui/Styles';
+import Footer from '../components/footer/Footer';
 
 const Week = dynamic(() => import('../components/week/Week'));
 
@@ -23,6 +24,7 @@ export default function Programacion() {
           <Week />
         </Wrapper>
       </Main>
+      <Footer />
     </>
   );
 }

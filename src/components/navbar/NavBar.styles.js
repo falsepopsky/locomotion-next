@@ -29,4 +29,10 @@ export const StyledLink = styled.a`
   &:hover {
     opacity: 0.7;
   }
+
+  &::selection {
+    text-shadow: none;
+    color: rgb(11, 11, 11);
+    background: rgb(214, 214, 214) none repeat scroll 0% 0%;
+  }
 `;
