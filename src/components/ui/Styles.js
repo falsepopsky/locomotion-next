@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   height: ${({ page }) => (page ? 'auto' : 'calc(100vh - 54px)')};
+  background-color: ${(props) => (props.colorFondo ? 'red' : null)};
 `;
 
 export const PlayerContainer = styled.section`
@@ -31,8 +32,27 @@ export const Wrapper = styled.section`
 export const StyledH2 = styled.h2`
   margin: 2.5em 0 0;
   padding: 0;
+  align-self: center;
   text-align: center;
   font-weight: 400;
+  min-width: min-content;
   max-width: max-content;
-  align-self: center;
+
+  &::selection {
+    text-shadow: none;
+    color: rgb(11, 11, 11);
+    background: rgb(214, 214, 214) none repeat scroll 0% 0%;
+  }
+`;
+
+export const StyledP = styled.p`
+  margin: 16px 0;
+  padding: 0;
+  font-weight: 300;
+
+  &::selection {
+    text-shadow: none;
+    color: rgb(11, 11, 11);
+    background: rgb(214, 214, 214) none repeat scroll 0% 0%;
+  }
 `;

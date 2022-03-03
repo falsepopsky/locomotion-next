@@ -205,7 +205,7 @@ export const VolumeSound = () => {
 
 export const Science = () => {
   return (
-    <svg viewBox="0 0 636.7 227.3" className="science-dept" fill="#d9d9d9">
+    <svg viewBox="0 0 636.7 227.3" fill="#d9d9d9">
       <path
         d="M98.4,4.6l94.4,54.5v109.1l-94.4,54.5L4,168.2V59.1L98.4,4.6 M98.4,0L0,56.8v113.7l98.4,56.8l98.4-56.8V56.8L98.4,0L98.4,0
           z"

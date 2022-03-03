@@ -1,9 +1,12 @@
+import dynamic from 'next/dynamic';
 import Meta from '../components/meta/Meta';
 import Navigation from '../components/navbar/NavBar';
 import { Main, Wrapper, StyledH2 } from '../components/ui/Styles';
-import Week from '../components/week/Week';
+import Footer from '../components/footer/Footer';
 
-export default function Horarios() {
+const Week = dynamic(() => import('../components/week/Week'));
+
+export default function Programacion() {
   return (
     <>
       <Meta
@@ -21,6 +24,7 @@ export default function Horarios() {
           <Week />
         </Wrapper>
       </Main>
+      <Footer />
     </>
   );
 }

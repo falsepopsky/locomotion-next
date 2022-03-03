@@ -8,24 +8,22 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "luxon": "^2.0.2",
-    "next": "^11.1.2",
+    "luxon": "^2.3.1",
+    "next": "^12.1.0",
     "next-page-transitions": "*",
     "nprogress": "^0.2.0",
-    "rc-slider": "^9.7.2",
+    "rc-slider": "^10.0.0-alpha.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-is": "^17.0.2",
-    "react-multi-carousel": "^2.6.3",
+    "react-multi-carousel": "^2.6.5",
     "react-player": "^2.9.0",
-    "screenfull": "^5.1.0",
-    "styled-components": "^5.3.0",
-    "swr": "^1.0.0"
+    "screenfull": "^5.2.0",
+    "styled-components": "^5.3.3",
+    "swr": "^1.2.2"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.0"
+    "eslint": "^8.10.0",
+    "eslint-config-next": "^12.1.0"
   },
   "repository": {
     "type": "git",
