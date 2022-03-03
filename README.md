@@ -12,6 +12,10 @@
 
 ---
 
+### :camera: Pics
+
+<img src="./docs/index.png" alt="Index site of Locomotion TV NEXT" />
+
 ### :computer: System Requirements
 
 - Node.js 12.0 or later

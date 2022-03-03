@@ -58,7 +58,7 @@ const Legacy = () => {
         <StyledP>
           Sí, les mandé mensaje privado 2 veces por FB, en el cual me ofrecí
           tanto para cambiar su diseño o hacerlo juntos, pero no hubo más
-          respuesta que solo de "lo pasamos y vemos que nos dicen".
+          respuesta que solo de &quot;lo pasamos y vemos que nos dicen&quot;.
         </StyledP>
 
         <StyledH3>
@@ -68,9 +68,9 @@ const Legacy = () => {
           Uno de los problemas PRINCIPALES es que se debe desactivar la conexión
           segura desde el navegador, ya que el link de streaming es HTTP, en fin
           no puedo comentar mucho de esto acá pero pueden buscar info sobre
-          "HTTPS VS HTTP" y fijarse el error que salta en consola, otros de los
-          motivos podría ser porque simplemente está caído el servicio de
-          stream.
+          &quot;HTTPS VS HTTP&quot; y fijarse el error que salta en consola,
+          otros de los motivos podría ser porque simplemente está caído el
+          servicio de stream.
         </StyledP>
 
         <StyledH3>
