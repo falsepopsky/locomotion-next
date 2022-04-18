@@ -8,14 +8,14 @@ import { PlayerContainer } from '../ui/Styles';
 import Controls from './../controls/Controls';
 import { PlayButton } from './../svgs/Svgs';
 
-const mediaStreamUrl = 'http://51.222.85.85:81/hls/loco/index.m3u8';
+const mediaStream = process.env.NEXT_PUBLIC_LOCOMOTION_STREAM;
 
 const configPlayer = {
   file: {
     forceHLS: true,
     hlsOptions: {
-      xhrSetup: function (xhr, mediaStreamUrl) {
-        xhr.open('GET', mediaStreamUrl);
+      xhrSetup: function (xhr, mediaStream) {
+        xhr.open('GET', mediaStream);
         xhr.setRequestHeader('X-CustomHeader', 'Locomotion TV NEXT');
       },
     },
@@ -65,7 +65,7 @@ const Player = () => {
   return (
     <PlayerContainer ref={containerPlayer}>
       <ReactPlayer
-        url={mediaStreamUrl}
+        url={mediaStream}
         controls={false}
         fallback={<Spinner />}
         light={true}
