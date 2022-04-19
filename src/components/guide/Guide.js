@@ -1,7 +1,7 @@
 // Libs
-import useSWR from 'swr';
+import useSWRImmutable from 'swr';
 import { getTodayName, formatTime } from '../../utils/luxonModule';
-import { fetcher, optionsSWR } from '../../utils/fetcher';
+import { fetcher } from '../../utils/fetcher';
 
 // Components
 import { ShowsWrapper } from './Guide.styles';
@@ -12,7 +12,7 @@ const ContainerGuide = () => {
   const nameOfTheCurrentDay = getTodayName();
   const URL_GUIDE = '/api/guide/' + nameOfTheCurrentDay;
 
-  const { data, error } = useSWR(URL_GUIDE, fetcher, optionsSWR);
+  const { data, error } = useSWRImmutable(URL_GUIDE, fetcher);
 
   if (error) return <div>{error.message}</div>;
   if (!data) return <Spinner />;
