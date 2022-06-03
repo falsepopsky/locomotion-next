@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import ReactPlayer from 'react-player/lazy';
+import dynamic from 'next/dynamic';
 import screenfull from 'screenfull';
 
 // Components
@@ -8,20 +8,8 @@ import { PlayerContainer } from '../ui/Styles';
 import Controls from './../controls/Controls';
 import { PlayButton } from './../svgs/Svgs';
 
+const DynamicReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 const mediaStream = process.env.NEXT_PUBLIC_LOCOMOTION_STREAM;
-
-const configPlayer = {
-  file: {
-    forceHLS: true,
-    hlsOptions: {
-      xhrSetup: function (xhr, mediaStream) {
-        xhr.open('GET', mediaStream);
-        xhr.setRequestHeader('X-CustomHeader', 'Locomotion TV NEXT');
-      },
-    },
-    hlsVersion: '1.0.5',
-  },
-};
 
 const Player = () => {
   const [isFullScreen, SetIsFullScreen] = useState(false);
@@ -64,17 +52,16 @@ const Player = () => {
 
   return (
     <PlayerContainer ref={containerPlayer}>
-      <ReactPlayer
+      <DynamicReactPlayer
         url={mediaStream}
         controls={false}
         fallback={<Spinner />}
         light={true}
-        width="100%"
-        height="100%"
+        width='100%'
+        height='100%'
         muted={playerProps.muted}
         playing={playerProps.playing}
         playIcon={<PlayButton />}
-        config={configPlayer}
         volume={playerProps.volume}
       />
       <Controls

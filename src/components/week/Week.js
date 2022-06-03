@@ -4,13 +4,7 @@ import { formatTime } from '../../utils/luxonModule';
 import { fetcher } from '../../utils/fetcher';
 
 // Component
-import {
-  WrapperSlider,
-  ContainerDay,
-  DayName,
-  SmallCard,
-  TextCard,
-} from './Week.style';
+import { WrapperSlider, ContainerDay, DayName, SmallCard, TextCard } from './Week.style';
 import Slider from '../carrousel/Carrousel';
 import { Spinner } from '../loader/LoaderStyles';
 

@@ -11,9 +11,7 @@ export default function Programacion() {
     <>
       <Meta
         title={'Programacion semanal'}
-        keywords={
-          'Horarios, Programacion, Locomotion, Anime, TV, TV Online, Gratis, 90s'
-        }
+        keywords={'Horarios, Programacion, Locomotion, Anime, TV, TV Online, Gratis, 90s'}
         description={'Programación semanal de Locomotion TV'}
       />
       <Navigation />
