@@ -1,9 +1,5 @@
 export const Series = [
-  [
-    'Animafilms',
-    'animafilms.webp',
-    'Espacio dedicado a las mejores películas animadas de todo el mundo.',
-  ],
+  ['Animafilms', 'animafilms.webp', 'Espacio dedicado a las mejores películas animadas de todo el mundo.'],
   [
     "B't X",
     'btx.webp',
@@ -59,11 +55,7 @@ export const Series = [
     'red_baron.webp',
     'La historia comienza con el intento de rapto de Sally, una programadora de robots, quien ha creado una perfecta máquina cibernética conocida como el Barón Rojo. Bajo la dirección de Kent como piloto, el Barón Rojo gana el título mundial de luchador metálico. Poseída por un arrebato de envidia, "La Máscara de Hierro" envía a sus luchadores metálicos a destruirlo. Así, la batalla más grande de todas comienza entre las fuerzas del mal y el Barón Rojo, defensor a ultranza de la paz y de la justicia.',
   ],
-  [
-    'Especial de Locomotion',
-    'especial_locomotion.webp',
-    'Maraton especial de 3 horas de tu serie favorita.',
-  ],
+  ['Especial de Locomotion', 'especial_locomotion.webp', 'Maraton especial de 3 horas de tu serie favorita.'],
   [
     'Evangelion',
     'evangelion.webp',
@@ -79,11 +71,7 @@ export const Series = [
     'he_man.webp',
     'Cada vez que el príncipe Adam tiene la Espada está dotado con fabulosos poderes secretos y se transforma en He-Man, el hombre más poderoso en el universo. Junto con sus aliados cercanos, He-Man utiliza sus poderes para defender Eternia de las fuerzas del maléfico Skeletor.',
   ],
-  [
-    'Japanimotion',
-    'japanimotion.webp',
-    'Espacio dedicado a lo mejor de la animación japonesa.',
-  ],
+  ['Japanimotion', 'japanimotion.webp', 'Espacio dedicado a lo mejor de la animación japonesa.'],
   [
     'Las Guerreras Magicas',
     'guerreras_magicas.webp',
@@ -114,11 +102,7 @@ export const Series = [
     'rambo.webp',
     'John Rambo es un héroe capaz de embarcarse en peligrosas misiones a lo largo de todo el mundo, enfrentándose normalmente a las tropas malignas del general Warhawk y su organización S.A.V.A.G.E.',
   ],
-  [
-    'Ren y Stimpy',
-    'ren_stimpy.webp',
-    'Las grandes desventuras de un hiperactivo chihuahua y un gato estúpido.',
-  ],
+  ['Ren y Stimpy', 'ren_stimpy.webp', 'Las grandes desventuras de un hiperactivo chihuahua y un gato estúpido.'],
   [
     'Robotech',
     'robotech.webp',

@@ -1,7 +1,7 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle, ThemeProvider, keyframes } from 'styled-components';
 import Router from 'next/router';
-import NProgress from 'nprogress'; /* 
-import 'nprogress/nprogress.css'; */
+import NProgress from 'nprogress';
+// import 'nprogress/nprogress.css';
 import { PageTransition } from 'next-page-transitions';
 import { darkTheme } from '../theme/loco';
 
@@ -10,6 +10,15 @@ NProgress.configure({ showSpinner: false });
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
+
+const nprogressSpinner = keyframes`
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`;
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -105,10 +114,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     box-shadow: 0 0 10px #29d, 0 0 5px #29d;
     opacity: 1.0;
-
-    -webkit-transform: rotate(3deg) translate(0px, -4px);
-        -ms-transform: rotate(3deg) translate(0px, -4px);
-            transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
   }
 
   /* Remove these to get rid of the spinner */
@@ -128,9 +134,7 @@ const GlobalStyle = createGlobalStyle`
     border-top-color: #29d;
     border-left-color: #29d;
     border-radius: 50%;
-
-    -webkit-animation: nprogress-spinner 400ms linear infinite;
-            animation: nprogress-spinner 400ms linear infinite;
+    animation: ${nprogressSpinner} 400ms linear infinite;
   }
 
   .nprogress-custom-parent {
@@ -141,15 +145,6 @@ const GlobalStyle = createGlobalStyle`
   .nprogress-custom-parent #nprogress .spinner,
   .nprogress-custom-parent #nprogress .bar {
     position: absolute;
-  }
-
-  @-webkit-keyframes nprogress-spinner {
-    0%   { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-  }
-  @keyframes nprogress-spinner {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
   }`;
 
 export default function App({ Component, pageProps, router }) {
@@ -157,7 +152,7 @@ export default function App({ Component, pageProps, router }) {
     <>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <PageTransition timeout={300} classNames="page-transition">
+        <PageTransition timeout={300} classNames='page-transition'>
           <Component {...pageProps} key={router.route} />
         </PageTransition>
       </ThemeProvider>

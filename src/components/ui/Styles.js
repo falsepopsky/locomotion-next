@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   height: ${({ page }) => (page ? 'auto' : 'calc(100vh - 54px)')};
-  background-color: ${(props) => (props.colorFondo ? 'red' : null)};
+  background-color: ${({ colorFondo }) => colorFondo && 'red'};
 `;
 
 export const PlayerContainer = styled.section`
