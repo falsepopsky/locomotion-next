@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { LocomotionSVG } from '../svgs/locomotion';
 import { LogoContainer, NavigationBar, RoutesContainer, StyledLink } from './styles';
+import { LocomotionSVG } from './svg';
 
 const Navigation = () => {
   return (

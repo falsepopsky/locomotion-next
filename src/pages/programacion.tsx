@@ -7,7 +7,7 @@ import Motion from 'component/ui/motion';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
-const Week = dynamic(() => import('component/week/Week'));
+const Week = dynamic(() => import('component/week'));
 
 const Programacion: NextPage = () => {
   return (

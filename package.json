@@ -12,7 +12,9 @@
     "pre-commit": "npm run prettier-format && npm run lint",
     "prisma-generate": "npx prisma generate",
     "prisma-push": "npx prisma db push",
-    "prisma-studio": "npx prisma studio"
+    "prisma-studio": "npx prisma studio",
+    "vercel-build": "prisma generate && prisma migrate deploy && next build",
+    "prisma:generate": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^4.0.0",

@@ -1,5 +1,5 @@
-import { Science } from '../svgs/science';
 import { ContainerF, Hr, Information, MenuF, WrapperF } from './styles';
+import { Science } from './svg';
 
 const Footer = () => {
   return (
