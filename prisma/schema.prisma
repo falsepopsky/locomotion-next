@@ -3,12 +3,12 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./loco.db"
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
 }
 
 model Information {
-  id       Int     @id @default(autoincrement())
+  id       Int     @id @default(sequence())
   name     String  @unique
   cover    String
   sinopsis String
@@ -16,7 +16,7 @@ model Information {
 }
 
 model Shows {
-  id     Int         @id @default(autoincrement())
+  id     Int         @id @default(sequence())
   starts String
   ends   String
   showId Int
@@ -25,7 +25,7 @@ model Shows {
 }
 
 model Day {
-  id     Int     @id @default(autoincrement())
+  id     Int     @id @default(sequence())
   day    String
   series Shows[]
 }
