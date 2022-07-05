@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+model Information {
+  id       Int     @id @default(sequence())
+  name     String  @unique
+  cover    String
+  sinopsis String
+  Shows    Shows[]
+}
+
+model Shows {
+  id     Int         @id @default(sequence())
+  starts String
+  ends   String
+  showId Int
+  show   Information @relation(fields: [showId], references: [id])
+  days   Day[]
+}
+
+model Day {
+  id     Int     @id @default(sequence())
+  day    String
+  series Shows[]
+}

@@ -1,0 +1,6 @@
+documentation:
+  - 'docs/*'
+styles:
+  - 'src/components/**/styles.tsx'
+enhancement:
+  - any: ['src/components/**/*.tsx', '!src/components/**/styles.tsx']
