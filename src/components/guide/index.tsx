@@ -1,7 +1,7 @@
 // Libs
+import { fetcher } from '@utils/fetcher';
+import { formatTime, getTodayName } from '@utils/luxonModule';
 import useSWRImmutable from 'swr';
-import { fetcher } from '../../utils/fetcher';
-import { formatTime, getTodayName } from '../../utils/luxonModule';
 
 // Components
 import ShowCard from '../show-card';
