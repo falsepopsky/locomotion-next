@@ -1,0 +1,31 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./loco.db"
+}
+
+model Information {
+  id       Int     @id @default(autoincrement())
+  name     String  @unique
+  cover    String
+  sinopsis String
+  Shows    Shows[]
+}
+
+model Shows {
+  id     Int         @id @default(autoincrement())
+  starts String
+  ends   String
+  showId Int
+  show   Information @relation(fields: [showId], references: [id])
+  days   Day[]
+}
+
+model Day {
+  id     Int     @id @default(autoincrement())
+  day    String
+  series Shows[]
+}
