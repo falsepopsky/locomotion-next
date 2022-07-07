@@ -4,9 +4,9 @@ import Player from 'component/player/index';
 import { GuideContainer, Main } from 'component/ui';
 import Motion from 'component/ui/motion';
 import type { NextPage } from 'next';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 
-const ContainerGuide = dynamic(() => import('component/guide'));
+// const ContainerGuide = dynamic(() => import('component/guide'));
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +16,8 @@ const Home: NextPage = () => {
       <Main>
         <Player />
         <GuideContainer>
-          <ContainerGuide />
+          <p>testing guys</p>
+          {/*  <ContainerGuide /> */}
         </GuideContainer>
       </Main>
     </Motion>

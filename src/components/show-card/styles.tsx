@@ -48,14 +48,8 @@ export const CardInfo = styled.div`
 export const Title = styled.p`
   margin: 0;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   color: #f5f5f5;
-
-  &::selection {
-    text-shadow: none;
-    background: #aaffec;
-    color: black;
-  }
 
   @media (min-width: 576px) {
     font-size: 24px;
@@ -79,13 +73,6 @@ export const Text = styled.p<TextProps>`
   font-weight: ${({ sinopsis }) => (sinopsis ? '300' : '400')};
   font-size: ${({ sinopsis }) => (sinopsis ? '16px' : '14px')};
   user-select: ${({ sinopsis }) => (sinopsis ? 'auto' : 'none')};
-  letter-spacing: ${({ sinopsis }) => (sinopsis ? '-1px;' : 'normal')};
-
-  &::selection {
-    text-shadow: none;
-    background: #aaffec;
-    color: black;
-  }
 
   @media (min-width: 576px) {
     font-size: ${({ sinopsis }) => (sinopsis ? '18px' : '16px')};

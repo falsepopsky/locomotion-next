@@ -1,7 +1,7 @@
 import Footer from 'component/footer';
 import Meta from 'component/head';
 import Navigation from 'component/navbar';
-import { Main, StyledH2, Wrapper } from 'component/ui';
+import { HeaderMax, Main, Wrapper } from 'component/ui';
 import Motion from 'component/ui/motion';
 
 import type { NextPage } from 'next';
@@ -20,7 +20,7 @@ const Programacion: NextPage = () => {
       <Navigation />
       <Main page>
         <Wrapper>
-          <StyledH2>Programación semanal</StyledH2>
+          <HeaderMax>Programación semanal</HeaderMax>
           <Week />
         </Wrapper>
       </Main>

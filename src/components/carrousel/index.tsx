@@ -38,7 +38,6 @@ const Slider = ({ children }: SliderProps) => {
       removeArrowOnDeviceType={'mobile'}
       minimumTouchDrag={80}
       keyBoardControl={false}
-      autoPlaySpeed={5000}
       showDots
     >
       {children}

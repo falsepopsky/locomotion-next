@@ -1,26 +1,23 @@
 import Link from 'next/link';
-import { LogoContainer, NavigationBar, RoutesContainer, StyledLink } from './styles';
+import { NavLink, StyledLink } from '../link';
+import { ItemNav, NavBar } from './styles';
 import { LocomotionSVG } from './svg';
 
 const Navigation = () => {
   return (
-    <NavigationBar>
-      <LogoContainer>
+    <NavBar>
+      <ItemNav>
         <Link href='/' passHref>
-          <a>
+          <StyledLink svg>
             <LocomotionSVG />
-          </a>
+          </StyledLink>
         </Link>
-      </LogoContainer>
-      <RoutesContainer>
-        <Link href='/programacion' passHref>
-          <StyledLink>Programación</StyledLink>
-        </Link>
-        <Link href='/about' passHref>
-          <StyledLink>Acerca de</StyledLink>
-        </Link>
-      </RoutesContainer>
-    </NavigationBar>
+      </ItemNav>
+      <ItemNav>
+        <NavLink href='/programacion' content='Programacion' />
+        <NavLink href='/about' content='About' />
+      </ItemNav>
+    </NavBar>
   );
 };
 

@@ -10,6 +10,13 @@ const nprogressSpinner = keyframes`
 `;
 
 const GlobalStyle = createGlobalStyle`
+
+::selection {
+    text-shadow: none;
+    color: #0b0b0b;
+    background: #d6d6d6
+  }
+
   html {
     scrollbar-color: #fff #0b0b0b;
     scrollbar-width: thin;

@@ -9,7 +9,7 @@ const Footer = () => {
         <MenuF>
           <Information>Locomotion TV NEXT 2021-2022</Information>
         </MenuF>
-        <MenuF science>
+        <MenuF>
           <Science />
         </MenuF>
       </WrapperF>

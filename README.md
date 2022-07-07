@@ -18,7 +18,7 @@
 
 ### :computer: System Requirements
 
-- Node.js 12.0 or later
+- Node.js 14.0 or later
 - MacOS, Windows (including WSL), and Linux are supported
 
 ### 🔧 Setup
@@ -31,6 +31,7 @@
 ### :pushpin: Built with
 
 - React + NEXT.JS
+- Prisma + CockroachDB
 - styled-components
 - luxon
 - swr
@@ -45,6 +46,9 @@
 <div style="margin: 20px 0;">
 
     .
+    ├── vscode
+    ├── docs
+    ├── prisma
     ├── public
     │   ├── banners
     │   └── ...
@@ -53,6 +57,8 @@
     │   ├── components
     │   │   └── ...
     │   ├── pages
+    │   │   ├── api
+    │   │   └── ...
     │   └── utils
     └── LICENSE
 
