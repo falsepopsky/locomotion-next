@@ -23,8 +23,8 @@ const Information = () => {
         <HeaderMin>¿Qué es Locomotion TV NEXT?</HeaderMin>
         <Paragraph>
           Locomotion TV NEXT, es un proyecto que lo pensé cuando el sitio oficial seguía y sigue sufriendo de constantes
-          ataques DDoS el cuál imposibilita visitar la página, por lo cual decidi crear una nueva página que se libere
-          de estos problemas.
+          ataques DDoS el cuál imposibilita visitar la página, ver el streaming, etc., por lo cual decidi crear algo
+          sencillo que se libere de estos problemas.
         </Paragraph>
 
         <HeaderMin>¿En que se diferencian ambas páginas?</HeaderMin>
@@ -33,8 +33,8 @@ const Information = () => {
           <li>Diseño y que sea Responsive.</li>
           <li>Ofrecer la programación y horarios tanto del día corriente &#40;página principal&#41;, como semanal.</li>
           <li>
-            Trabajar con NEXT JS, que es un framework que facilitaba demasiado lo que necesitaba para esto &#40;React,
-            APIs, SSR, etc.&#41;.
+            Trabajar con NEXT JS, que es un framework que me brinda las herramientas necesarias para poder realizarlo de
+            manera sencilla &#40;React, APIs, SSR, etc.&#41;.
           </li>
         </Ol>
       </BoxSection>

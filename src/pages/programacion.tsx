@@ -1,13 +1,12 @@
-import Footer from 'component/footer';
 import Meta from 'component/head';
 import Navigation from 'component/navbar';
 import { HeaderMax, Main, Wrapper } from 'component/ui';
 import Motion from 'component/ui/motion';
-
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
 const Week = dynamic(() => import('component/week'));
+const Footer = dynamic(() => import('component/footer'));
 
 const Programacion: NextPage = () => {
   return (
