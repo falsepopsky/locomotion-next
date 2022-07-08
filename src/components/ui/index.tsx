@@ -11,7 +11,6 @@ type BoxProps = {
 
 const Main = styled.main<MainProps>`
   height: ${({ page }) => (page ? 'auto' : 'calc(100vh - 54px)')};
-  background-color: ${({ colorFondo }) => colorFondo && 'red'};
 `;
 
 const PlayerContainer = styled.div`

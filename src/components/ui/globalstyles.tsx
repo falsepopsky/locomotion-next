@@ -10,11 +10,10 @@ const nprogressSpinner = keyframes`
 `;
 
 const GlobalStyle = createGlobalStyle`
-
-::selection {
+  ::selection {
     text-shadow: none;
     color: #0b0b0b;
-    background: #d6d6d6
+    background: #d6d6d6;
   }
 
   html {
@@ -127,8 +126,8 @@ const GlobalStyle = createGlobalStyle`
   .transition-page {
     display: flex;
     flex-flow: column nowrap;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: calc(100vh - 54px);
   }
 `;
 
