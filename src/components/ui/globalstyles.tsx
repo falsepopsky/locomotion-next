@@ -62,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
     flex-flow: column nowrap;
     min-height: 100vh;
     background: #0b0b0b;
-    color: ${({ theme }) => theme.colors.links};
+    color: #d9d9d9;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;

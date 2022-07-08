@@ -1,11 +1,10 @@
+import Navigation from 'component/navbar/index';
 import GlobalStyle from 'component/ui/globalstyles';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { darkTheme } from '../theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -32,12 +31,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <ThemeProvider theme={darkTheme}>
-        <GlobalStyle />
-        <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </ThemeProvider>
+      <GlobalStyle />
+      <Navigation />
+      <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+        <Component {...pageProps} key={router.route} />
+      </AnimatePresence>
     </>
   );
 }
