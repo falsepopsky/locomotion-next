@@ -1,38 +1,18 @@
 import styled from 'styled-components';
 
-export const NavigationBar = styled.nav`
+export const NavBar = styled.nav`
   padding: 0 2vw;
   width: 100%;
   height: 54px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  justify-content: space-between;
 `;
 
-export const LogoContainer = styled.div`
+export const ItemNav = styled.div`
   width: auto;
   height: 54px;
-`;
-
-export const RoutesContainer = styled.div`
-  margin-left: auto;
-`;
-
-export const StyledLink = styled.a`
-  padding: 0;
-  margin: 0 0.5em;
-  font-size: 14px;
-  text-decoration: none;
-  opacity: 1;
-  color: #d9d9d9;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &::selection {
-    text-shadow: none;
-    color: rgb(11, 11, 11);
-    background: rgb(214, 214, 214) none repeat scroll 0% 0%;
-  }
+  display: flex;
+  align-items: center;
 `;

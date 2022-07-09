@@ -10,6 +10,12 @@ const nprogressSpinner = keyframes`
 `;
 
 const GlobalStyle = createGlobalStyle`
+  ::selection {
+    text-shadow: none;
+    color: #0b0b0b;
+    background: #d6d6d6;
+  }
+
   html {
     scrollbar-color: #fff #0b0b0b;
     scrollbar-width: thin;
@@ -55,7 +61,7 @@ const GlobalStyle = createGlobalStyle`
     flex-flow: column nowrap;
     min-height: 100vh;
     background: #0b0b0b;
-    color: ${({ theme }) => theme.colors.links};
+    color: #d9d9d9;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
@@ -120,8 +126,8 @@ const GlobalStyle = createGlobalStyle`
   .transition-page {
     display: flex;
     flex-flow: column nowrap;
-    width: 100vw;
-    min-height: 100vh;
+    width: 100%;
+    min-height: calc(100vh - 54px);
   }
 `;
 

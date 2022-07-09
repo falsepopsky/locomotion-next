@@ -1,5 +1,4 @@
 import Meta from 'component/head';
-import Navigation from 'component/navbar/index';
 import Player from 'component/player/index';
 import { GuideContainer, Main } from 'component/ui';
 import Motion from 'component/ui/motion';
@@ -12,7 +11,6 @@ const Home: NextPage = () => {
   return (
     <Motion>
       <Meta />
-      <Navigation />
       <Main>
         <Player />
         <GuideContainer>

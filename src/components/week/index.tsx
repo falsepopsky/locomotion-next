@@ -2,6 +2,7 @@
 import { fetcher } from '@utils/fetcher';
 import { formatTime } from '@utils/luxonModule';
 import useSWRImmutable from 'swr/immutable';
+
 // Component
 import Slider from '../carrousel';
 import { Spinner } from '../spinner';

@@ -48,14 +48,8 @@ export const CardInfo = styled.div`
 export const Title = styled.p`
   margin: 0;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 400;
   color: #f5f5f5;
-
-  &::selection {
-    text-shadow: none;
-    background: #aaffec;
-    color: black;
-  }
 
   @media (min-width: 576px) {
     font-size: 24px;
@@ -76,19 +70,12 @@ export const Text = styled.p<TextProps>`
   padding-right: ${({ sinopsis }) => sinopsis && '2vw'};
   margin: ${({ sinopsis }) => (sinopsis ? '0 1px 0 0' : '0 0 0 1vw')};
   color: ${({ sinopsis }) => (sinopsis ? '#bdbdbd' : '#ecfafc')};
-  font-weight: ${({ sinopsis }) => (sinopsis ? '300' : '400')};
+  font-weight: 400;
   font-size: ${({ sinopsis }) => (sinopsis ? '16px' : '14px')};
   user-select: ${({ sinopsis }) => (sinopsis ? 'auto' : 'none')};
-  letter-spacing: ${({ sinopsis }) => (sinopsis ? '-1px;' : 'normal')};
-
-  &::selection {
-    text-shadow: none;
-    background: #aaffec;
-    color: black;
-  }
 
   @media (min-width: 576px) {
-    font-size: ${({ sinopsis }) => (sinopsis ? '18px' : '16px')};
+    font-size: 1rem;
   }
 `;
 

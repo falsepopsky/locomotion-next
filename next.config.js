@@ -8,6 +8,7 @@ const nextConfig = () => {
     compiler: {
       styledComponents: true,
     },
+    swcMinify: true,
     async headers() {
       return [
         {
