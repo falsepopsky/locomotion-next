@@ -1,4 +1,4 @@
-# Locomotion TV - Next JS Sample
+# Locomotion Next
 
 <img src="./public/logo_white.png" alt="Locomotion Logo" />
 
@@ -23,10 +23,9 @@
 
 ### 🔧 Setup
 
-```
 1. npm i
-2. npm run dev
-```
+2. Setup [Prisma](docs/prisma.md)
+3. npm run dev
 
 ### :pushpin: Built with
 
@@ -53,7 +52,6 @@
     │   ├── banners
     │   └── ...
     ├── src
-    │   ├── data
     │   ├── components
     │   │   └── ...
     │   ├── pages
