@@ -4,33 +4,23 @@ import { formatTime, getTodayName } from '@utils/luxonModule';
 import useSWRImmutable from 'swr/immutable';
 
 // Components
+import type { DayProps } from '../../interfaces';
 import ShowCard from '../show-card';
 import { Spinner } from '../spinner';
 import { ShowsWrapper } from './styles';
-
-type Series = {
-  id: number;
-  starts: string;
-  ends: string;
-  show: {
-    name: string;
-    cover: string;
-    sinopsis: string;
-  };
-};
 
 const ContainerGuide = () => {
   const nameOfTheCurrentDay = getTodayName();
   const URL_GUIDE = '/api/guide/' + nameOfTheCurrentDay;
 
-  const { data, error } = useSWRImmutable(URL_GUIDE, fetcher);
+  const { data, error } = useSWRImmutable<DayProps>(URL_GUIDE, fetcher);
 
   if (error) return <div>{error.message}</div>;
   if (!data) return <Spinner />;
 
   return (
     <ShowsWrapper>
-      {data?.series?.map((serie: Series) => {
+      {data?.series?.map((serie) => {
         const formatedStart = formatTime(serie.starts);
         const formatedEnding = formatTime(serie.ends);
         return (
@@ -39,8 +29,8 @@ const ContainerGuide = () => {
             image={serie.show.cover}
             name={serie.show.name}
             sinopsis={serie.show.sinopsis}
-            start={formatedStart}
-            ending={formatedEnding}
+            starts={formatedStart}
+            ends={formatedEnding}
           />
         );
       })}

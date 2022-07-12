@@ -4,31 +4,15 @@ import { formatTime } from '@utils/luxonModule';
 import useSWRImmutable from 'swr/immutable';
 
 // Component
+import type { DayProps } from '../../interfaces';
 import Slider from '../carrousel';
 import { Spinner } from '../spinner';
 import { ContainerDay, DayName, SmallCard, TextCard, WrapperSlider } from './styles';
 
-type DayProps = {
-  id: number;
-  day: string;
-  series: Array<Series>;
-};
-
-type Series = {
-  id: number;
-  starts: string;
-  ends: string;
-  show: {
-    name: string;
-    cover: string;
-    sinopsis: string;
-  };
-};
-
 const Week = () => {
   const URL_GUIDE = '/api/guide/';
 
-  const { data, error } = useSWRImmutable(URL_GUIDE, fetcher);
+  const { data, error } = useSWRImmutable<DayProps[]>(URL_GUIDE, fetcher);
 
   if (error) return <div>{error.message}</div>;
   if (!data) return <Spinner />;
@@ -36,7 +20,7 @@ const Week = () => {
   return (
     <WrapperSlider>
       <Slider>
-        {data?.map((days: DayProps) => {
+        {data?.map((days) => {
           return (
             <ContainerDay key={days.id}>
               <DayName>{days.day}</DayName>

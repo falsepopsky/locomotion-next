@@ -1,16 +1,9 @@
 import Image from 'next/image';
+import type { ShowCardProps } from '../../interfaces';
 import { CardImage, CardInfo, ContainerCard, SinopsisContainer, Text, TimerContainer, Title } from './styles';
 import { Timer } from './svg';
 
-type ShowCardProps = {
-  name: string;
-  image: string;
-  sinopsis: string;
-  start: string;
-  ending: string;
-};
-
-const ShowCard = ({ name, image, sinopsis, start, ending }: ShowCardProps) => {
+const ShowCard = ({ name, image, sinopsis, starts, ends }: ShowCardProps) => {
   return (
     <ContainerCard>
       <CardImage>
@@ -31,7 +24,7 @@ const ShowCard = ({ name, image, sinopsis, start, ending }: ShowCardProps) => {
         <TimerContainer>
           <Timer />
           <Text>
-            {start} - {ending}
+            {starts} - {ends}
           </Text>
         </TimerContainer>
       </CardInfo>

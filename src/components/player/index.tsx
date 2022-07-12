@@ -1,6 +1,4 @@
 import dynamic from 'next/dynamic';
-
-// Components
 import { Spinner } from '../spinner';
 import { PlayerContainer } from '../ui';
 import { PlayButton } from './svg';
