@@ -10,7 +10,7 @@ import { Spinner } from '../spinner';
 import { ContainerDay, DayName, SmallCard, TextCard, WrapperSlider } from './styles';
 
 const Week = () => {
-  const URL_GUIDE = '/api/guide/';
+  const URL_GUIDE = '/api/guide';
 
   const { data, error } = useSWRImmutable<DayProps[]>(URL_GUIDE, fetcher);
 
