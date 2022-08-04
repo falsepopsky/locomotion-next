@@ -4,3 +4,5 @@ styles:
   - 'src/components/**/styles.tsx'
 enhancement:
   - any: ['src/components/**/*.tsx', '!src/components/**/styles.tsx']
+api:
+  - 'src/pages/api/*.ts'
