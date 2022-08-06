@@ -1,30 +1,22 @@
+import { getTodayName } from '@utils/luxonModule';
 import { prisma } from '@utils/prisma';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function dayHandler(req: NextApiRequest, res: NextApiResponse) {
-  const weekend = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-  const {
-    query: { day },
-    method,
-  } = req;
+  const { method } = req;
 
   if (method !== 'GET') {
     res.status(405).json({ error: `Method ${method} Not Allowed` });
     return;
   }
 
-  let dayResult = weekend.some((d) => d === day);
+  let today = getTodayName();
 
-  if (!day || (typeof day !== 'string' && day.length >= 10) || !dayResult) {
-    res.status(400).json({ message: 'Include a valid day name' });
-    return;
-  }
-
-  if (typeof day === 'string') {
+  if (typeof today === 'string') {
     try {
       const data = await prisma.day.findFirst({
         where: {
-          day: day,
+          day: today,
         },
         include: {
           series: {

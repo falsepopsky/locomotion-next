@@ -1,6 +1,6 @@
 // Libs
 import { fetcher } from '@utils/fetcher';
-import { formatTime, getTodayName } from '@utils/luxonModule';
+import { formatTime } from '@utils/luxonModule';
 import useSWRImmutable from 'swr/immutable';
 
 // Components
@@ -10,8 +10,7 @@ import { Spinner } from '../spinner';
 import { ShowsWrapper } from './styles';
 
 const ContainerGuide = () => {
-  const nameOfTheCurrentDay = getTodayName();
-  const URL_GUIDE = '/api/guide/' + nameOfTheCurrentDay;
+  const URL_GUIDE = '/api/day';
 
   const { data, error } = useSWRImmutable<DayProps>(URL_GUIDE, fetcher);
 
