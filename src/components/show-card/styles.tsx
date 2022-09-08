@@ -7,8 +7,8 @@ type TextProps = {
 export const ContainerCard = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  padding: 0.5vh 2vw;
-  margin-bottom: 6px;
+  padding: 0 2vw;
+  gap: 0 1em;
 `;
 
 export const CardImage = styled.div`
@@ -32,7 +32,6 @@ export const CardInfo = styled.div`
   width: 100%;
   min-height: 156px;
   max-height: 156px;
-  margin-left: 1vw;
   padding-left: 2vw;
   background: #0d0d0d;
   border-radius: 12px;

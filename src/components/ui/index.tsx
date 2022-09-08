@@ -55,7 +55,6 @@ const HeaderMax = styled.h2`
   font-weight: 600;
   min-width: min-content;
   max-width: max-content;
-  color: #ffffff;
 `;
 
 const HeaderMin = styled.h3`
@@ -67,6 +66,10 @@ const HeaderMin = styled.h3`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  @media (prefers-color-scheme: light) {
+    background-image: linear-gradient(-45deg, #2575fc 0%, #6a11cb 100%);
+  }
 `;
 
 const Paragraph = styled.p`

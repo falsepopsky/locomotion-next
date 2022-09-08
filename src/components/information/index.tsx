@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { StyledLink } from '../link';
-import { BoxSection, HeaderMax, HeaderMin, Ol, Paragraph } from './styles';
+import { BoxSection, HeaderMax, HeaderMin, Ol, Paragraph } from '../ui';
 
 const Information = () => {
   return (

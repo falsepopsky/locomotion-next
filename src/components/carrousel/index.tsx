@@ -6,7 +6,7 @@ type SliderProps = {
   children: React.ReactNode;
 };
 
-const Slider = ({ children }: SliderProps) => {
+const Slider = (props: SliderProps) => {
   const breakpoints: ResponsiveType = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 2000 },
@@ -40,7 +40,7 @@ const Slider = ({ children }: SliderProps) => {
       keyBoardControl={false}
       showDots
     >
-      {children}
+      {props.children}
     </Carousel>
   );
 };

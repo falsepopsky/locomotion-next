@@ -29,6 +29,10 @@ const StyledLink = styled.a<LinkProp>`
   :active {
     text-decoration: none;
   }
+
+  @media (prefers-color-scheme: light) {
+    color: #262626;
+  }
 `;
 
 const NavLink = ({ href, content }: LinkStyled) => {
