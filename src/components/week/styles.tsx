@@ -18,8 +18,13 @@ export const WrapperSlider = styled.div`
 
   .react-multi-carousel-dot button {
     border: none;
+
     &:hover {
       opacity: 0.6;
+    }
+
+    @media (prefers-color-scheme: light) {
+      background: #141414;
     }
   }
   .react-multi-carousel-dot--active button {
@@ -71,18 +76,24 @@ export const SmallCard = styled.div`
   padding-left: 12px;
   display: flex;
   flex-flow: column nowrap;
-  border-left: 2px solid white;
+  border-left: 2px solid #fff;
   user-select: none;
 
   &:hover {
     border-color: blue;
   }
+
+  @media (prefers-color-scheme: light) {
+    border-color: #141414;
+  }
 `;
 
 export const TextCard = styled.p<TextCardProps>`
-  margin: 0;
-  padding: 0;
   color: ${({ time }) => (time ? '#D9D9D9' : '#EFEFEF')};
   font-size: ${({ time }) => (time ? '12px' : '18px')};
   font-weight: 300;
+
+  @media (prefers-color-scheme: light) {
+    color: ${({ time }) => (time ? '#141414' : '#111111')};
+  }
 `;

@@ -1,4 +1,4 @@
-import { ContainerF, Hr, Information, MenuF, WrapperF } from './styles';
+import { ContainerF, Hr, MenuF, WrapperF } from './styles';
 import { Science } from './svg';
 
 const Footer = () => (
@@ -6,7 +6,7 @@ const Footer = () => (
     <Hr />
     <WrapperF>
       <MenuF>
-        <Information>Locomotion TV NEXT 2021-2022</Information>
+        <p>Locomotion Next 2021-2022</p>
       </MenuF>
       <MenuF>
         <Science />

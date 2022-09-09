@@ -10,7 +10,6 @@ export const Spinner = styled.div`
   content: '';
   width: 40px;
   height: 40px;
-  margin: 0;
   border-radius: 50%;
   border: 2px solid transparent;
   border-color: #01f1e3 #01f1e34d;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 type MainProps = {
   page?: boolean;
-  colorFondo?: boolean;
 };
 
 type BoxProps = {
@@ -21,6 +20,10 @@ const PlayerContainer = styled.div`
   flex-flow: column nowrap;
   align-items: center;
   background: #0d0d0d;
+
+  @media (prefers-color-scheme: light) {
+    background: #fff;
+  }
 `;
 
 const GuideContainer = styled.section`
@@ -44,11 +47,15 @@ const BoxSection = styled.section<BoxProps>`
   margin: ${({ img }) => img && '6vh 0 2vh'};
   padding: ${({ img }) => (img ? null : '2vh 0')};
   height: ${({ img }) => img && '200px'};
+  gap: 2em 0;
+
+  @media (prefers-color-scheme: light) {
+    filter: ${({ img }) => img && 'drop-shadow(0 0.1rem 0.20rem rgb(26, 26, 26))'};
+  }
 `;
 
 const HeaderMax = styled.h2`
   margin: 2em 0 1.5em;
-  padding: 0;
   align-self: center;
   text-align: center;
   font-size: 2rem;
@@ -74,13 +81,12 @@ const HeaderMin = styled.h3`
 
 const Paragraph = styled.p`
   margin: 0 0 1.1em;
-  padding: 0;
   font-weight: 400;
 `;
 
 const Ol = styled.ol`
   list-style-type: disc;
-  list-style-position: outside;
+  list-style-position: inside;
   list-style-image: none;
 `;
 

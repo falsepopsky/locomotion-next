@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "prettier-format": "prettier --cache -w .",
-    "pre-commit": "npm run prettier-format && npm run lint",
+    "pre-commit": "pnpm run prettier-format && pnpm run lint",
     "prisma-generate": "npx prisma generate",
     "prisma-push": "npx prisma db push",
     "prisma-studio": "npx prisma studio",

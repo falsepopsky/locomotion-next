@@ -10,7 +10,6 @@ interface LinkProp {
 }
 
 const StyledLink = styled.a<LinkProp>`
-  padding: 0;
   margin: ${({ svg }) => (svg ? '0' : '0 0.5em')};
   display: ${({ svg }) => svg && 'inline-flex'};
   max-width: max-content;

@@ -6,10 +6,10 @@ const ContainerF = styled.footer`
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  gap: 2em 0;
 `;
 
 const Hr = styled.hr`
-  margin: 1em 0 1.5em;
   width: 100%;
 `;
 
@@ -25,9 +25,4 @@ const MenuF = styled.div`
   align-self: center;
 `;
 
-const Information = styled.p`
-  margin: 0;
-  padding: 0;
-`;
-
-export { ContainerF, Hr, WrapperF, MenuF, Information };
+export { ContainerF, Hr, WrapperF, MenuF };
