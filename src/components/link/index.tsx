@@ -10,7 +10,6 @@ interface LinkProp {
 }
 
 const StyledLink = styled.a<LinkProp>`
-  padding: 0;
   margin: ${({ svg }) => (svg ? '0' : '0 0.5em')};
   display: ${({ svg }) => svg && 'inline-flex'};
   max-width: max-content;
@@ -28,6 +27,10 @@ const StyledLink = styled.a<LinkProp>`
   :visited,
   :active {
     text-decoration: none;
+  }
+
+  @media (prefers-color-scheme: light) {
+    color: #262626;
   }
 `;
 

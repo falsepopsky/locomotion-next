@@ -7,8 +7,8 @@ type TextProps = {
 export const ContainerCard = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  padding: 0.5vh 2vw;
-  margin-bottom: 6px;
+  padding: 0 2vw;
+  gap: 0 1em;
 `;
 
 export const CardImage = styled.div`
@@ -32,7 +32,6 @@ export const CardInfo = styled.div`
   width: 100%;
   min-height: 156px;
   max-height: 156px;
-  margin-left: 1vw;
   padding-left: 2vw;
   background: #0d0d0d;
   border-radius: 12px;
@@ -43,13 +42,15 @@ export const CardInfo = styled.div`
   &:hover {
     box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 15px;
   }
+
+  @media (prefers-color-scheme: light) {
+    background: #fff;
+  }
 `;
 
 export const Title = styled.p`
-  margin: 0;
   font-size: 22px;
   font-weight: 400;
-  color: #f5f5f5;
 
   @media (min-width: 576px) {
     font-size: 24px;
@@ -68,9 +69,7 @@ export const SinopsisContainer = styled.div`
 
 export const Text = styled.p<TextProps>`
   padding-right: ${({ sinopsis }) => sinopsis && '2vw'};
-  margin: ${({ sinopsis }) => (sinopsis ? '0 1px 0 0' : '0 0 0 1vw')};
-  color: ${({ sinopsis }) => (sinopsis ? '#bdbdbd' : '#ecfafc')};
-  font-weight: 400;
+  font-weight: 300;
   font-size: ${({ sinopsis }) => (sinopsis ? '16px' : '14px')};
   user-select: ${({ sinopsis }) => (sinopsis ? 'auto' : 'none')};
 
@@ -87,6 +86,7 @@ export const TimerContainer = styled.div`
   background: #181818;
   border-radius: 6px;
   padding: 2px 10px;
+  gap: 0 1em;
 
   .timer-svg {
     width: 14px;
@@ -98,5 +98,9 @@ export const TimerContainer = styled.div`
       width: 20px;
       height: 20px;
     }
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: #eaeaea;
   }
 `;

@@ -18,14 +18,14 @@
 
 ### :computer: System Requirements
 
-- Node.js 14.0 or later
+- Node.js 16.0 or later
 - MacOS, Windows (including WSL), and Linux are supported
 
 ### 🔧 Setup
 
-1. npm i
+1. pnpm i --frozen-lockfile
 2. Setup [Prisma](docs/prisma.md)
-3. npm run dev
+3. pnpm dev
 
 ### :pushpin: Built with
 
@@ -42,8 +42,7 @@
 
 #### :open_file_folder: Folder Structure
 
-<div style="margin: 20px 0;">
-
+```
     .
     ├── vscode
     ├── docs
@@ -59,5 +58,4 @@
     │   │   └── ...
     │   └── utils
     └── LICENSE
-
-</div>
+```

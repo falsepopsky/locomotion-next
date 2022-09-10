@@ -24,6 +24,8 @@ const GlobalStyle = createGlobalStyle`
   *,
   ::after,
   ::before {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
 
@@ -55,16 +57,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-flow: column nowrap;
     min-height: 100vh;
-    background: #0b0b0b;
+    background: #161616;
     color: #d9d9d9;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     overflow-y: auto;
+    
+    @media (prefers-color-scheme: light) {
+      background: #f4f4f4;
+      color: #262626;
+    }
   }
 
   #nprogress {

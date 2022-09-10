@@ -1,5 +1,5 @@
 export const LocomotionSVG: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => (
-  <svg viewBox='0 0 2500 2500' width={42} height={54}>
+  <svg viewBox='0 0 2500 2500' width={42} height={42}>
     <g>
       <path
         className='st0'

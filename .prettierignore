@@ -1,6 +1,7 @@
 node_modules
 .next
-package*.json
+package.json
+pnpm-lock.yaml
 public
 .env
 .gitignore

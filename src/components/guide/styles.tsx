@@ -7,4 +7,5 @@ export const ShowsWrapper = styled.div`
   height: 100%;
   overflow: hidden auto;
   scrollbar-width: thin;
+  gap: 1em 0;
 `;
