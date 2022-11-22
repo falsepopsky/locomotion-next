@@ -2,7 +2,8 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "styled-components.vscode-styled-components",
+    "bradlc.vscode-tailwindcss",
+    "EditorConfig.EditorConfig",
     "prisma.prisma",
     "formulahendry.auto-rename-tag"
   ]

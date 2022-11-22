@@ -1,12 +1,12 @@
 import Navigation from 'component/navbar/index';
-import GlobalStyle from 'component/ui/globalstyles';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
 import { useEffect } from 'react';
+import '../styles/globals.css';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   NProgress.configure({ showSpinner: false });
 
@@ -31,7 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <GlobalStyle />
       <Navigation />
       <AnimatePresence mode='wait' initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
         <Component {...pageProps} key={router.route} />
@@ -39,5 +38,3 @@ function MyApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
-
-export default MyApp;
