@@ -31,7 +31,7 @@
 
 - React + NEXT.JS
 - Prisma + CockroachDB
-- styled-components
+- Tailwind CSS
 - luxon
 - swr
 - etc.

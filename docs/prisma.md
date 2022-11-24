@@ -17,6 +17,6 @@ datasource db {
 DATABASE_URL="file://loco.db"
 ```
 
-4. Run the following scripts `npm run prisma-generate`, then `npm run prisma-push`.
+4. Run the following scripts `pnpm run prisma-generate`, then `pnpm run prisma-push`.
 
-5. Run prisma studio `npx prisma studio`, if you can see the schema and the data, you're good to go.
+5. Run prisma studio `pnpx prisma studio`, if you can see the schema and the data, you're good to go.
