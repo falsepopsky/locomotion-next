@@ -9,14 +9,12 @@ export default function About() {
       <Meta title={'Acerca de Locomotion TV'} description={'Todo lo relacionado a Locomotion Next'} />
       <main className='flex h-full flex-col flex-nowrap gap-y-20 px-[4vw] text-sm sm:text-base'>
         <div className='relative mt-4 h-48 w-full'>
-          <Image className='object-contain drop-shadow-lg' alt='Locomotion logo' src='/logo_white.png' fill />
+          <Image className='object-contain drop-shadow-lg' alt='Locomotion logo' src='/logo_white.png' fill priority />
         </div>
         <div className='flex flex-col flex-nowrap gap-y-10'>
-          <h2 className='text-center text-3xl font-semibold'>Un poco de historia</h2>
+          <h2>Un poco de historia</h2>
           <div className='space-y-8'>
-            <h3 className='max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-2xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400'>
-              ¿Qué es Locomotion TV?
-            </h3>
+            <h3>¿Qué es Locomotion TV?</h3>
             <p className='font-light'>
               Locomotion TV es un proyecto creado por fans y para fans que ofrece un servicio de streaming tanto de
               peliculas, ovas, animes y series para adultos basado en el antiguo canal de cable <b>Locomotion</b>, de
@@ -24,6 +22,8 @@ export default function About() {
               <a
                 className='font-bold underline decoration-indigo-500 hover:decoration-indigo-600'
                 href='https://www.facebook.com/locomotionxtv/'
+                rel='noreferrer'
+                target='_blank'
               >
                 Facebook
               </a>{' '}
@@ -31,15 +31,15 @@ export default function About() {
               <a
                 className='font-bold underline decoration-indigo-500 hover:decoration-indigo-600'
                 href='http://locomotiontv.com/envivo'
+                rel='noreferrer'
+                target='_blank'
               >
                 Sitio Oficial
               </a>
             </p>
           </div>
           <div className='space-y-8'>
-            <h3 className='max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-2xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400'>
-              ¿Qué es Locomotion TV NEXT?
-            </h3>
+            <h3>¿Qué es Locomotion TV NEXT?</h3>
 
             <p className='font-light'>
               Locomotion TV NEXT, es un proyecto que lo desarrollé cuando el sitio oficial seguía y sigue sufriendo de
@@ -49,9 +49,7 @@ export default function About() {
             </p>
           </div>
           <div className='space-y-8'>
-            <h3 className='max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-2xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400'>
-              ¿En que se diferencian ambas páginas?
-            </h3>
+            <h3>¿En que se diferencian ambas páginas?</h3>
 
             <p className='font-light'>Principalmente me enfoque en ciertos puntos</p>
 
@@ -70,11 +68,9 @@ export default function About() {
           </div>
         </div>
         <div className='flex flex-col flex-nowrap gap-y-10 pb-4'>
-          <h2 className='text-center text-3xl font-semibold'>F.A.Q.</h2>
+          <h2>F.A.Q.</h2>
           <div className='space-y-8'>
-            <h3 className='max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-2xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400'>
-              ¿Te contactaste con los dueños?
-            </h3>
+            <h3>¿Te contactaste con los dueños?</h3>
             <p className='font-light'>
               Sí, les escribí por mensaje privado, en el cual me ofrecí tanto para cambiar su diseño o hacerlo juntos,
               en definitiva tener una charla. Pero no hubo más respuesta que solo de &quot;lo pasamos y vemos que nos
@@ -82,20 +78,24 @@ export default function About() {
             </p>
           </div>
           <div className='space-y-8'>
-            <h3 className='max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-2xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400'>
-              Cuando hago click en PLAY, el reproductor se queda cargando.
-            </h3>
+            <h3>Cuando hago click en PLAY, el reproductor se queda cargando.</h3>
             <p className='font-light'>
               Uno de los problemas PRINCIPALES es que se debe desactivar la conexión segura desde el navegador, ya que
-              el link de streaming es HTTP, escribir sobre esto acá es mucho pero pueden buscar información sobre
-              &quot;HTTPS VS HTTP&quot; y observar el error en consola. Otros de los motivos podría ser porque
-              simplemente está caído el servicio de streaming del cual no tengo control.
+              el link de streaming es HTTP, para más información podés buscar sobre{' '}
+              <a
+                className='font-bold underline decoration-indigo-500 hover:decoration-indigo-600'
+                href='https://web.dev/fixing-mixed-content/'
+                rel='noreferrer'
+                target='_blank'
+              >
+                contenido mixto
+              </a>
+              . Otros de los motivos podría ser porque simplemente está caído el servicio de streaming del cual no tengo
+              control.
             </p>
           </div>
           <div className='space-y-8'>
-            <h3 className='max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-2xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400'>
-              La programación no coincide con lo que esta dando actualmente.
-            </h3>
+            <h3>La programación no coincide con lo que esta dando actualmente.</h3>
             <p className='font-light'>
               Uno de los motivos es que los horarios están para la región de Argentina &#40;puedo modificarlo para
               mostrar el horario correcto dependiendo el país pero dado al siguiente problema nunca me atreví a
