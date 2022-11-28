@@ -1,5 +1,5 @@
-import { getTodayName } from '@utils/luxonModule';
-import { prisma } from '@utils/prisma';
+import { getTodayName } from '@/utils/luxonModule';
+import { prisma } from '@/utils/prisma';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function dayHandler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,31 +12,29 @@ export default async function dayHandler(req: NextApiRequest, res: NextApiRespon
 
   let today = getTodayName();
 
-  if (typeof today === 'string') {
-    try {
-      const data = await prisma.day.findFirst({
-        where: {
-          day: today,
-        },
-        include: {
-          series: {
-            include: {
-              show: true,
-            },
+  try {
+    const data = await prisma.day.findFirst({
+      where: {
+        day: today,
+      },
+      include: {
+        series: {
+          include: {
+            show: true,
           },
         },
-      });
+      },
+    });
 
-      if (!data) {
-        res.status(404).json({ message: 'Record not found' });
-        return;
-      }
-
-      res.status(200).json(data);
-      return;
-    } catch (error) {
-      res.status(500).json({ error: error });
+    if (!data) {
+      res.status(404).json({ message: 'Record not found' });
       return;
     }
+
+    res.status(200).json(data);
+    return;
+  } catch (error) {
+    res.status(500).json({ error: error });
+    return;
   }
 }
