@@ -1,15 +1,14 @@
 // Libs
-import { fetcher } from '@utils/fetcher';
-import { formatTime } from '@utils/luxonModule';
+import { fetcher } from '@/utils/fetcher';
+import { formatTime } from '@/utils/luxonModule';
 import useSWRImmutable from 'swr/immutable';
 
 // Components
 import type { DayProps } from '../../interfaces';
 import ShowCard from '../show-card';
 import { Spinner } from '../spinner';
-import { ShowsWrapper } from './styles';
 
-const ContainerGuide = () => {
+export default function ContainerGuide() {
   const URL_GUIDE = '/api/day';
 
   const { data, error } = useSWRImmutable<DayProps>(URL_GUIDE, fetcher);
@@ -18,7 +17,7 @@ const ContainerGuide = () => {
   if (!data) return <Spinner />;
 
   return (
-    <ShowsWrapper>
+    <>
       {data?.series?.map((serie) => {
         const formatedStart = formatTime(serie.starts);
         const formatedEnding = formatTime(serie.ends);
@@ -33,8 +32,6 @@ const ContainerGuide = () => {
           />
         );
       })}
-    </ShowsWrapper>
+    </>
   );
-};
-
-export default ContainerGuide;
+}

@@ -1,8 +1,9 @@
-import { loadShows } from '@utils/load-shows';
-import { formatTime } from '@utils/luxonModule';
-import Footer from 'component/footer';
-import Meta from 'component/head';
-import Motion from 'component/ui/motion';
+import Footer from '@/component/footer';
+import Meta from '@/component/head';
+import Motion from '@/component/motion';
+import { loadShows } from '@/utils/loadShows';
+import { formatTime } from '@/utils/luxonModule';
+
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import type { DayProps } from '../interfaces';
 

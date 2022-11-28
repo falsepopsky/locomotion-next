@@ -1,6 +1,6 @@
-import Footer from 'component/footer';
-import Meta from 'component/head';
-import Motion from 'component/ui/motion';
+import Footer from '@/component/footer';
+import Meta from '@/component/head';
+import Motion from '@/component/motion';
 import Image from 'next/image';
 
 export default function About() {
