@@ -1,4 +1,4 @@
-import Navigation from 'component/navbar/index';
+import Navigation from '@/component/navbar/index';
 import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';

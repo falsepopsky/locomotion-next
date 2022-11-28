@@ -69,8 +69,8 @@ export default function Footer() {
         <div className='min-w-[200px] max-w-[200px]'>
           <Science />
         </div>
-        <div className='self-center'>
-          <p className='font-light'>Locomotion Next © 2021 - 2022</p>
+        <div className='self-center text-sm font-light sm:text-base'>
+          <p>Locomotion Next © 2021 - 2022</p>
         </div>
       </div>
     </footer>

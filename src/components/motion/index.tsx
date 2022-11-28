@@ -17,7 +17,7 @@ const MotionWrapper = ({ children }: MotProps) => (
     exit='exit'
     variants={variants}
     transition={{ type: 'linear' }}
-    className='transition-page'
+    className='flex min-h-[calc(100vh_-_54px)] w-full flex-col flex-nowrap'
   >
     {children}
   </motion.div>

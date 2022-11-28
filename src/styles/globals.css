@@ -12,14 +12,22 @@
     }
   }
 
-  ::selection {
-    text-shadow: none;
-    color: #0b0b0b;
-    background: #d6d6d6;
+  * {
+    scrollbar-color: #fff #0b0b0b;
+    scrollbar-width: thin;
+  }
+
+  h2 {
+    @apply text-center text-2xl font-semibold sm:text-3xl;
+  }
+
+  h3 {
+    @apply max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400 sm:text-2xl;
   }
 
   ::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
   }
 
   ::-webkit-scrollbar-track {
@@ -33,11 +41,6 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #ffffffc7;
-  }
-
-  html {
-    scrollbar-color: #fff #0b0b0b;
-    scrollbar-width: thin;
   }
 }
 
@@ -96,60 +99,5 @@
   .nprogress-custom-parent #nprogress .spinner,
   .nprogress-custom-parent #nprogress .bar {
     position: absolute;
-  }
-
-  .transition-page {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-    min-height: calc(100vh - 54px);
-  }
-
-  .react-multi-carousel-track {
-    will-change: auto;
-  }
-
-  .react-multi-carousel-list {
-    padding: 2em 0;
-    margin: 1em 0;
-  }
-
-  .react-multi-carousel-dot button {
-    border: none;
-  }
-
-  .react-multi-carousel-dot button:hover {
-    opacity: 0.6;
-  }
-
-  .react-multi-carousel-dot--active button {
-    background: blue;
-  }
-  .react-multiple-carousel__arrow {
-    background: #f4f4f4;
-  }
-
-  .react-multiple-carousel__arrow::before {
-    color: #1e1e1e;
-  }
-
-  .react-multiple-carousel__arrow--right {
-    top: 14px;
-    right: calc(2% + 1px);
-  }
-  .react-multiple-carousel__arrow--left {
-    top: 14px;
-    right: calc(4% + 44px);
-    left: unset;
-  }
-
-  .react-multiple-carousel__arrow:hover {
-    opacity: 0.8;
-  }
-
-  @media (prefers-color-scheme: light) {
-    .react-multi-carousel-dot button {
-      background: #141414;
-    }
   }
 }
