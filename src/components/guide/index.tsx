@@ -1,6 +1,5 @@
 // Libs
 import { fetcher } from '@/utils/fetcher';
-import { formatTime } from '@/utils/luxonModule';
 import useSWRImmutable from 'swr/immutable';
 
 // Components
@@ -19,16 +18,14 @@ export default function ContainerGuide() {
   return (
     <>
       {data?.series?.map((serie) => {
-        const formatedStart = formatTime(serie.starts);
-        const formatedEnding = formatTime(serie.ends);
         return (
           <ShowCard
             key={serie.id}
             image={serie.show.cover}
             name={serie.show.name}
             sinopsis={serie.show.sinopsis}
-            starts={formatedStart}
-            ends={formatedEnding}
+            starts={serie.starts}
+            ends={serie.ends}
           />
         );
       })}

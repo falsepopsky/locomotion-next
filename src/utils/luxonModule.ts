@@ -7,10 +7,3 @@ export const getTodayName = () => {
   const ZoneBA = 'America/Buenos_Aires';
   return DateTime.now().setZone(ZoneBA).toFormat('cccc').toLowerCase();
 };
-
-/**
- * Returns Formatted ISO time to hh:mm
- */
-export const formatTime = (time: string) => {
-  return DateTime.fromISO(time).toFormat('T');
-};

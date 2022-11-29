@@ -2,8 +2,6 @@ import Footer from '@/component/footer';
 import Meta from '@/component/head';
 import Motion from '@/component/motion';
 import { loadShows } from '@/utils/loadShows';
-import { formatTime } from '@/utils/luxonModule';
-
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import type { DayProps } from '../interfaces';
 
@@ -29,16 +27,13 @@ function Programacion({ data }: InferGetStaticPropsType<typeof getStaticProps>) 
                 </p>
 
                 {days.series.map((serie) => {
-                  const start = formatTime(serie.starts);
-                  const end = formatTime(serie.ends);
-
                   return (
                     <div
                       className='flex flex-col flex-nowrap gap-y-2 border-l-2 border-l-slate-900 pl-2 font-light hover:border-l-blue-700 dark:border-l-inherit'
                       key={serie.id}
                     >
                       <p className='text-xs'>
-                        {start} - {end}
+                        {serie.starts} - {serie.ends}
                       </p>
 
                       <p className='font-normal sm:text-lg'>{serie.show.name}</p>
