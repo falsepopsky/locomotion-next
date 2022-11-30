@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #b4b4b4;
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1;
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@layer base {
+  * {
+    scrollbar-width: thin;
+  }
+
+  h2 {
+    @apply text-center text-2xl font-semibold sm:text-3xl;
+  }
+
+  h3 {
+    @apply max-w-max bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-xl font-medium text-transparent dark:from-emerald-300 dark:to-sky-400 sm:text-2xl;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0;
+  }
+}

@@ -1,9 +1,8 @@
-import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { Head, Html, Main, NextScript } from 'next/document';
 
-function MyDocument() {
+export default function Document() {
   return (
-    <Html lang='en'>
+    <Html lang='en' className='h-full w-full'>
       <Head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='anonymous' />
@@ -11,34 +10,13 @@ function MyDocument() {
           href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'
           rel='stylesheet'
         />
+        <meta name='color-scheme' content='dark light' />
         <link rel='shortcut icon' href='/favicon.png' />
       </Head>
-      <body>
+      <body className='flex min-h-screen w-full flex-col flex-nowrap overflow-y-auto overflow-x-hidden bg-zinc-100 text-slate-900 selection:bg-slate-900 selection:text-zinc-100 dark:bg-neutral-900 dark:text-neutral-300 dark:selection:bg-neutral-300 dark:selection:text-neutral-900'>
         <Main />
         <NextScript />
       </body>
     </Html>
   );
 }
-
-MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<DocumentInitialProps> => {
-  const sheet = new ServerStyleSheet();
-  const originalRenderPage = ctx.renderPage;
-
-  try {
-    ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-      });
-
-    const initialProps = await Document.getInitialProps(ctx);
-    return {
-      ...initialProps,
-      styles: [initialProps.styles, sheet.getStyleElement()],
-    };
-  } finally {
-    sheet.seal();
-  }
-};
-
-export default MyDocument;

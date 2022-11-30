@@ -8,8 +8,14 @@
   "editor.wordWrap": "on",
   "editor.guides.bracketPairs": true,
   "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "npm.scriptExplorerAction": "open",
   "npm.autoDetect": "on",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "eslint.alwaysShowStatus": true,
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "[prisma]": {
