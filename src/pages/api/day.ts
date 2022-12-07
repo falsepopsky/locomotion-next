@@ -34,7 +34,7 @@ export default async function dayHandler(
       return;
     }
 
-    res.status(200).setHeader('Cache-Control', 's-maxage=21600').json(data);
+    res.status(200).json(data);
     return;
   } catch (error) {
     res.status(500).json({ message: error });
