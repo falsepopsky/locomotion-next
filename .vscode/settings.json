@@ -13,6 +13,7 @@
   },
   "npm.scriptExplorerAction": "open",
   "npm.autoDetect": "on",
+  "npm.packageManager": "pnpm",
   "files.associations": {
     "*.css": "tailwindcss"
   },
