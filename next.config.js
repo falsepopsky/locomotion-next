@@ -22,7 +22,10 @@ const nextConfig = () => {
         },
         {
           source: '/api/:path',
-          headers: [{ key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS' }],
+          headers: [
+            { key: 'Access-Control-Allow-Methods', value: 'GET,OPTIONS' },
+            { key: 'Cache-Control', value: 's-maxage=21600' },
+          ],
         },
       ];
     },

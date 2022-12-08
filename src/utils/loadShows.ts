@@ -1,8 +1,8 @@
-import { prisma } from './prisma';
+import { client } from './prisma';
 
 export async function loadShows() {
   try {
-    const result = await prisma.day.findMany({
+    const result = await client.day.findMany({
       include: {
         series: {
           include: {
