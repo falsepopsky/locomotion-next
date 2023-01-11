@@ -4,7 +4,7 @@
 
 ## :information_source: About
 
-> ...
+> Rediseño de la página 'locomotiontv', de forma minimalista, con guia de programación semanal y del día corriente.
 
 ### :rocket: Check the site
 
