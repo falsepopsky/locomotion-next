@@ -24,7 +24,7 @@ const ShowCard = ({ name, image, sinopsis, starts, ends }: ShowCardProps) => {
             {starts} - {ends}
           </p>
         </div>
-        <p className='max-h-[60px] min-h-[60px] overflow-auto text-sm font-light leading-relaxed sm:text-base'>
+        <p className='max-h-[60px] min-h-[60px] overflow-auto pr-4 text-sm font-light leading-relaxed sm:text-base'>
           {sinopsis}
         </p>
       </div>

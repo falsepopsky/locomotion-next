@@ -5,7 +5,6 @@ import React, { createRef, useEffect } from 'react';
 
 export interface HlsPlayerProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
   hlsConfig?: HlsConfig;
-  src: string;
 }
 
 function Player({ hlsConfig, src, ...props }: HlsPlayerProps) {
@@ -24,12 +23,10 @@ function Player({ hlsConfig, src, ...props }: HlsPlayerProps) {
         ...hlsConfig,
       });
 
-      if (playerRef.current != null) {
-        newHls.attachMedia(playerRef.current);
-      }
+      playerRef.current && newHls.attachMedia(playerRef.current);
 
       newHls.on(Hls.Events.MEDIA_ATTACHED, () => {
-        newHls.loadSource(src);
+        typeof src === 'string' && newHls.loadSource(src);
       });
 
       newHls.on(Hls.Events.ERROR, function (_event, data) {
@@ -42,7 +39,7 @@ function Player({ hlsConfig, src, ...props }: HlsPlayerProps) {
               newHls.recoverMediaError();
               break;
             default:
-              _initPlayer();
+              newHls.destroy();
               break;
           }
         }
