@@ -3,8 +3,8 @@
 const ContentSecurityPolicy = `
  default-src 'self';
  script-src 'self';
- media-src http://51.222.85.85:81/ http://51.222.85.85:81/hls/loco/index.m3u8;
- connect-src 'self' http://51.222.85.85:81/;
+ media-src ${process.env.LOCOMOTION_URL} ${process.env.NEXT_PUBLIC_LOCOMOTION_STREAM};
+ connect-src 'self' ${process.env.LOCOMOTION_URL};
  style-src 'self' 'unsafe-inline' fonts.googleapis.com;
  font-src 'self' fonts.gstatic.com;
  img-src 'self' data:;
@@ -16,6 +16,10 @@ const nextConfig = () => {
     swcMinify: true,
     async headers() {
       return [
+        {
+          source: '/',
+          headers: [{ key: 'Content-Security-Policy', value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim() }],
+        },
         {
           source: '/:path',
           headers: [{ key: 'Content-Security-Policy', value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim() }],

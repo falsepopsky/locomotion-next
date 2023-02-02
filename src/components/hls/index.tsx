@@ -1,68 +1,52 @@
-// react-hls with my edits
-
 import Hls, { type HlsConfig } from 'hls.js';
-import React, { createRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export interface HlsPlayerProps extends React.VideoHTMLAttributes<HTMLVideoElement> {
   hlsConfig?: HlsConfig;
+  source: string;
 }
 
-function Player({ hlsConfig, src, ...props }: HlsPlayerProps) {
-  const playerRef = createRef<HTMLVideoElement>();
+function Player({ hlsConfig, source, ...props }: HlsPlayerProps) {
+  const playerRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    let hls: Hls;
-
-    function _initPlayer() {
-      if (hls != null) {
-        hls.destroy();
-      }
-
-      const newHls = new Hls({
+    if (Hls.isSupported() && playerRef.current != null) {
+      const hls = new Hls({
         enableWorker: false,
         ...hlsConfig,
       });
 
-      playerRef.current && newHls.attachMedia(playerRef.current);
+      hls.attachMedia(playerRef.current);
 
-      newHls.on(Hls.Events.MEDIA_ATTACHED, () => {
-        typeof src === 'string' && newHls.loadSource(src);
+      hls.on(Hls.Events.MEDIA_ATTACHED, () => {
+        hls.loadSource(source);
       });
 
-      newHls.on(Hls.Events.ERROR, function (_event, data) {
+      hls.on(Hls.Events.ERROR, function (_event, data) {
         if (data.fatal) {
           switch (data.type) {
             case Hls.ErrorTypes.NETWORK_ERROR:
-              newHls.startLoad();
+              hls.startLoad();
               break;
             case Hls.ErrorTypes.MEDIA_ERROR:
-              newHls.recoverMediaError();
+              hls.recoverMediaError();
               break;
             default:
-              newHls.destroy();
+              hls.destroy();
               break;
           }
         }
       });
 
-      hls = newHls;
-    }
-
-    // Check for Media Source support
-    if (Hls.isSupported()) {
-      _initPlayer();
-    }
-
-    return () => {
-      if (hls != null) {
+      return () => {
         hls.destroy();
-      }
-    };
-  }, [hlsConfig, playerRef, src]);
+      };
+    }
+  }, [hlsConfig, source]);
 
-  return (
-    <>{Hls.isSupported() ? <video ref={playerRef} {...props} /> : <video ref={playerRef} src={src} {...props} />}</>
-  );
+  if (!source) throw new Error('Missing source');
+
+  return <video ref={playerRef} {...props} />;
 }
 
 export default Player;
