@@ -1,7 +1,8 @@
 import Meta from '@/component/head';
+import Player from '@/component/hls';
 import Motion from '@/component/motion';
 import dynamic from 'next/dynamic';
-const Player = dynamic(() => import('@/component/hls'), { ssr: false });
+
 const ContainerGuide = dynamic(() => import('@/component/guide'));
 
 export default function Home() {

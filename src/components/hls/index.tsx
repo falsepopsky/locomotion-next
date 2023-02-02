@@ -10,8 +10,6 @@ function Player({ hlsConfig, source, ...props }: HlsPlayerProps) {
   const playerRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (!source) return;
-
     if (Hls.isSupported() && playerRef.current != null) {
       const hls = new Hls({
         enableWorker: false,
@@ -45,6 +43,8 @@ function Player({ hlsConfig, source, ...props }: HlsPlayerProps) {
       };
     }
   }, [hlsConfig, source]);
+
+  if (!source) throw new Error('Missing source');
 
   return <video ref={playerRef} {...props} />;
 }
