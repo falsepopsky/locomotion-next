@@ -12,7 +12,7 @@ export default function ContainerGuide() {
 
   const { data, error } = useSWRImmutable<DayProps>(URL_GUIDE, fetcher);
 
-  if (error) return <div>{error.message}</div>;
+  if (error) return <div className='my-auto self-center'>{error.message}</div>;
   if (!data) return <Spinner />;
 
   return (
