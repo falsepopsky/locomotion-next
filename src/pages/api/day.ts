@@ -37,7 +37,7 @@ export default async function dayHandler(
     res.status(200).json(data);
     return;
   } catch (error) {
-    res.status(500).json({ message: error });
+    res.status(500).json({ message: 'Service database is not available' });
     return;
   }
 }

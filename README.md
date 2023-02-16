@@ -25,7 +25,8 @@
 
 1. pnpm i --frozen-lockfile
 2. Setup [Prisma](docs/prisma.md)
-3. pnpm dev
+3. copy and paste in [line 5](next.config.js) `script-src 'self' 'unsafe-eval';` to enable usafe-eval in development enviroment.
+4. pnpm dev
 
 ### :pushpin: Built with
 
