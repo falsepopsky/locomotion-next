@@ -1,0 +1,18 @@
+tasks:
+  - name: update pnpm & install dependencies
+    before: pnpm add -g pnpm
+    init: pnpm install
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+    description: Locomotion preview
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - bradlc.vscode-tailwindcss
+    - EditorConfig.EditorConfig
+    - prisma.prisma
+    - formulahendry.auto-rename-tag
