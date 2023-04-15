@@ -1,25 +1,25 @@
 # Locomotion Next
 
-<img src="./public/logo_white.png" alt="Locomotion Logo" />
+![Locomotion Logo](./public/logo_white.png)
 
 ## :information_source: About
 
-> Rediseño de la página 'locomotiontv', de forma minimalista, con guia de programación semanal y del día corriente.
+Rediseño de la página 'locomotiontv', de forma minimalista, con guia de programación semanal y del día corriente.
 
-### :rocket: Check the site
-
-[Locomotion TV NEXT](https://locomotion-tv-next.vercel.app/)
+> **Note**  
+> As of April 15th, 2023, this repository is going to be archived and the site will be shut down as well.
 
 ---
 
 ### :camera: Pics
 
-<img src="./docs/index.png" alt="Index site of Locomotion TV NEXT" />
+![home page of Locomotion Next](./docs/index.png)
 
 ### :computer: System Requirements
 
-- Node.js 16.0 or later
+- Node.js 18.0 or later
 - MacOS, Windows (including WSL), and Linux are supported
+- pnpm v8
 
 ### 🔧 Setup
 
