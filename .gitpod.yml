@@ -1,6 +1,6 @@
 tasks:
   - name: update pnpm & install dependencies
-    before: pnpm add -g pnpm
+    before: pnpm add -g pnpm@latest
     init: pnpm install
 
 ports:

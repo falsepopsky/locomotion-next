@@ -63,14 +63,14 @@ const Science: React.FunctionComponent<React.SVGAttributes<SVGElement>> = () => 
 
 export default function Footer() {
   return (
-    <footer className='mt-auto flex w-full flex-col flex-nowrap gap-4 py-[1.5vh] px-[2vw]'>
+    <footer className='mt-auto flex w-full flex-col flex-nowrap gap-4 px-[2vw] py-[1.5vh]'>
       <hr className='border-t-zinc-800' />
       <div className='flex flex-row flex-wrap justify-between gap-4'>
         <div className='min-w-[200px] max-w-[200px]'>
           <Science />
         </div>
         <div className='self-center text-sm font-light sm:text-base'>
-          <p>Locomotion Next © 2021 - 2022</p>
+          <p>Locomotion Next © 2021 - 2023</p>
         </div>
       </div>
     </footer>

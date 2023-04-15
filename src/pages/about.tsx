@@ -39,10 +39,10 @@ export default function About() {
             </p>
           </div>
           <div className='space-y-8'>
-            <h3>¿Qué es Locomotion TV NEXT?</h3>
+            <h3>¿Qué es Locomotion Next?</h3>
 
             <p className='font-light'>
-              Locomotion TV NEXT, es un proyecto que lo desarrollé cuando el sitio oficial seguía y sigue sufriendo de
+              Locomotion Next, es un proyecto que lo desarrollé cuando el sitio oficial seguía y sigue sufriendo de
               constantes ataques DDoS, el cuál imposibilitaba visitar la página tanto como para ver el streaming, ver
               horarios, etc. Por lo cual trate de levantar rápido un sitio que me brinde la posibilidad de seguir
               disfrutando lo anteriormente mencionado.

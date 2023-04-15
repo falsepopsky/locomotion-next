@@ -15,7 +15,7 @@ export default function Home() {
         </div>
 
         <div className='flex h-[35vh] flex-col flex-nowrap items-center justify-center'>
-          <div className='flex h-full w-full flex-col flex-nowrap gap-y-8 overflow-y-auto overflow-x-hidden py-[2vh] px-[2vw]'>
+          <div className='flex h-full w-full flex-col flex-nowrap gap-y-8 overflow-y-auto overflow-x-hidden px-[2vw] py-[2vh]'>
             <ContainerGuide />
           </div>
         </div>

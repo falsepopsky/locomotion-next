@@ -1,7 +1,7 @@
 {
   "root": true,
   "env": { "browser": true, "node": true },
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended", "prettier"],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "prettier"],
   "globals": {
     "React": "readonly"
   },
@@ -12,5 +12,6 @@
         "no-undef": "off"
       }
     }
-  ]
+  ],
+  "ignorePatterns": ["**/node_modules/*", "**/out/*", "**/.next/*", "environment.d.ts"]
 }
